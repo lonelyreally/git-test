@@ -256,6 +256,12 @@ const songs = [
         audio: 'audio/kets4eki, asteria - adding it up.mp3',
     },
     {
+        cover: 'images/GASPXR - SUMMER 2004.jpeg',
+        title: 'RAMONA FLOWERS!',
+        artist_1: 'GASPXR',
+        audio: 'albums/GASPXR/AUTISM SPECTRUM DISORDER (ASDELUXE)/audio/GASPXR - SUMMER2004.m4a',
+    },
+    {
         cover: 'images/GASPXR - RAMONA FLOWERS!.jpg',
         title: 'RAMONA FLOWERS!',
         artist_1: 'GASPXR',
@@ -1514,7 +1520,7 @@ const albums = [
         {title: 'RAMONA FLOWERS', artists: ['GASPXR'], audio: 'albums/GASPXR/AUTISM SPECTRUM DISORDER (ASDELUXE)/audio/GASPXR - RAMONA FLOWERS!.m4a'},
         {title: 'SAINTS & SINNERS', artists: ['GASPXR'], audio: ''},
         {title: 'RODEO', artists: ['GASPXR'], audio: ''},
-        {title: 'SUMMER 2004', artists: ['GASPXR'], audio: ''},
+        {title: 'SUMMER 2004', artists: ['GASPXR'], audio: 'albums/GASPXR/AUTISM SPECTRUM DISORDER (ASDELUXE)/audio/GASPXR - SUMMER2004.m4a'},
         {title: 'LUXURY BABY', artists: ['GASPXR', 'ELECTRAA'], audio: ''},
         {title: 'REDEMPTION', artists: ['GASPXR'], audio: ''},
         {title: 'THE BITE OF 87', artists: ['GASPXR'], audio: ''},
