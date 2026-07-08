@@ -257,7 +257,7 @@ const songs = [
     },
     {
         cover: 'images/GASPXR - SUMMER 2004.jpeg',
-        title: 'RAMONA FLOWERS!',
+        title: 'SUMMER 2004',
         artist_1: 'GASPXR',
         audio: 'albums/GASPXR/AUTISM SPECTRUM DISORDER (ASDELUXE)/audio/GASPXR - SUMMER2004.m4a',
     },
