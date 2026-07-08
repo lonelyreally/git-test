@@ -1,0 +1,817 @@
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.wrapper {
+    width: 100%;
+    font-family: 'Nexa';
+}
+
+.all-player {
+    width: 470px;
+    margin: 0 auto;
+}
+
+.container {
+    display: flex;
+}
+
+
+/* ПАНЕЛЬ */
+.panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    width: 70px;
+    background-color: #808080;
+    border-radius: 10px 0 0 10px;
+}
+
+.logo {
+    margin-top: 15px;
+}
+
+.panel-category {
+    margin-top: 10px;
+    display: grid;
+}
+
+.panel__profile {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 24px;
+}
+
+.panel_btn {
+    width: 70px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.panel_btn:not(.clicked):hover {
+    background-color: #696969;
+}
+
+.clicked {
+    background-color: #585858;
+}
+
+.player {
+    border-radius: 0 10px 10px 0;
+    width: 400px;
+    height: 465px;
+    background: #d8d8d8;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* МУЗЫКАЛЬНЫЙ ПЛЕЕР */
+.music_player {
+    padding: 30px 25px 20px 25px;
+}
+
+.song_img {
+    display: block;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.song_info {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.song_info__title {
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.list_of_artists {
+    font-weight: 700;
+    font-size: 16px;
+    color: #5a5a5a;
+    cursor: pointer;
+}
+
+.song_info__artist {
+    font-weight: 700;
+    font-size: 16px;
+    color: #5a5a5a;
+}
+
+.progress_box {
+    display: flex;
+    justify-content: center;
+}
+
+.progress {
+    height: 6px;
+    border-radius: 25px;
+    accent-color: black;
+    width: 320px;
+    cursor: pointer;
+}
+
+.song_time {
+    width: 320px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 12px;
+    color: #000;
+    margin: 8px auto;
+}
+
+.but {
+    cursor: pointer;
+}
+
+.audioplayer__player {
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    border-radius: 10px;
+    width: 350px;
+    height: 70px;
+    background: #787878;
+    position: relative;
+    justify-content: space-between;
+}
+
+.song_group {
+    display: flex;
+    align-items: center;
+}
+
+.song-change {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.play_song_button {
+    margin: 0 10px;
+}
+
+.mix_songs_button {
+    margin-left: 10px;
+}
+
+.volume_button {
+    height: 55px;
+    display: flex;
+    align-items: center;
+}
+
+
+/* ПЛЕЙЛИСТ */
+.playlist {
+    width: 100%;
+    height: 100%;
+    padding: 20px 25px;
+    position: absolute;
+    top: 0;
+    background: #d8d8d8;
+    overflow: auto;
+    display: none;
+}
+
+.zag {
+    font-weight: 600;
+    font-size: 19px;
+}
+
+.tracklist {
+    margin-top: 20px;
+    display: grid;
+    row-gap: 10px;
+    grid-template-columns: repeat(1, 350px);
+    grid-template-rows: repeat(1, 50px);
+    grid-auto-rows: 50px;
+}
+
+.track {
+    display: flex;
+    position: relative;
+    cursor: pointer;
+}
+
+.track-img {
+    border-radius: 10px;
+}
+
+.track-about {
+    margin-left: 10px;
+}
+
+.track-title {
+    font-weight: 700;
+    font-size: 16px;
+    margin-top: 7px;
+}
+
+.track-artist {
+    position: absolute;
+    bottom: 0;
+    font-weight: 700;
+    font-size: 15px;
+    color: #5a5a5a;
+    margin-bottom: 7px;
+    /* width: 290px; */
+    /* white-space: nowrap; */
+    /* overflow: hidden; */
+    /* text-overflow: ellipsis; */
+}
+
+.onItemHoverTrack {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    padding: 10px 0 10px 10px;
+    border-radius: 10px;
+    display: none;
+}
+
+/* Элемент hover показывается при наведении ИЛИ если трек активен */
+.track:hover .onItemHoverTrack,
+.track.track-active .onItemHoverTrack {
+    display: block !important;
+}
+
+
+/* СПИСОК ИСПОЛНИТЕЛЕЙ */
+.artists_list {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 20px 25px;
+    top: 0;
+    background: #d8d8d8;
+    overflow: auto;
+    display: none;
+}
+
+.block_img {
+    width: 90px;
+    border-radius: 100px;
+    margin-bottom: 5px;
+}
+
+.card {
+    text-align: center;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.artists {
+    margin-top: 20px;
+    display: grid;
+    row-gap: 20px;
+    column-gap: 40px;
+    grid-template-columns: repeat(3, 90px);
+    grid-template-rows: repeat(1, 111px);
+    grid-auto-rows: 111px;
+}
+
+
+/* ИСПОЛНИТЕЛИ В ОТКРЫВАЮЩЕМСЯ ОКНЕ */
+.artist-click {
+    background: #515151;
+    border-radius: 10px 10px 10px 0;
+    position: absolute;
+    bottom: 0;
+    padding: 10px 15px 25px 15px;
+    color: white;
+    display: none;
+}
+
+.artist-click-hat {
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: end;
+}
+
+.artist-click-hat .zag {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.test-grid {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(2, 175px);
+    column-gap: 20px;
+    row-gap: 15px;
+    border-radius: 10px 10px 10px 0;
+}
+
+.test-grid-odd {
+    grid-template-columns: repeat(2, 175px);
+}
+
+.test-grid-odd .gridy:last-child {
+    grid-column: span 2;
+}
+
+.gridy {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 100px;
+    cursor: pointer;
+}
+
+.gridy img {
+    width: 50px;
+    border-radius: 100px;
+    margin-right: 10px;
+}
+
+
+/* ПРОФИЛЬ ИСПОЛНИТЕЛЯ */
+.artist-profile {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 20px 25px;
+    top: 0;
+    background: #d8d8d8;
+    overflow: auto;
+    display: none;
+}
+
+.artist-profile-hat {
+    margin-top: 20px;
+    display: flex;
+    font-weight: 700;
+    font-size: 20px;
+    align-items: center;
+}
+
+.artist-profile-img {
+    border-radius: 100px;
+    margin-right: 20px;
+}
+
+.artist-profile-category-name {
+    font-weight: 700;
+    font-size: 18px;
+    display: flex;
+}
+
+.artist-profile-category-name img {
+    margin-bottom: -2px;
+    margin-left: 10px;
+}
+
+.category-name {
+    margin-top: 15px;
+}
+
+.singles-grid {
+    margin-top: 15px;
+    display: grid;
+    row-gap: 10px;
+    grid-template-columns: repeat(1, 350px);
+    grid-auto-rows: 45px;
+}
+
+.single-grid {
+    position: relative;
+    border-radius: 10px;
+    display: flex;
+}
+
+.single-grid img {
+    border-radius: 10px;
+}
+
+.about-single {
+    margin-left: 10px;
+    font-weight: 700;
+    font-size: 14px;
+    position: relative;
+}
+
+.single-title {
+    margin-top: 6px;
+    height: 16px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.single-artist {
+    margin-bottom: 6px;
+    height: 16px;
+    position: absolute;
+    bottom: 0;
+    color: #5a5a5a;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.albums-grid {
+    margin-top: 15px;
+    display: grid;
+    column-gap: 25px;
+    grid-template-columns: repeat(3, 100px);
+    grid-auto-flow: column;
+}
+
+.album {
+    cursor: pointer;
+    position: relative;
+}
+
+.album img {
+    width: 100px;
+    border-radius: 10px;
+}
+
+.album-name {
+    font-size: 16px;
+    margin-top: 5px;
+    text-align: center;
+    overflow-wrap: break-word
+}
+
+
+/* ОТКРЫТЫЙ АЛЬБОМ */
+.alb {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.album-tracklist-close {
+    position: absolute;
+    right: -35px;
+}
+
+.album-tracklist {
+    width: 300px;
+    max-height: 397px;
+    min-height: 177px;
+    border-radius: 10px;
+    background: #d8d8d8;
+    overflow: auto;
+}
+
+.sloy {
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.55);
+    display: none;
+}
+
+.album-tracklist-header {
+    display: flex;
+    padding: 15px 20px;
+    font-weight: 700;
+}
+
+.album-tracklist-header img {
+    width: 70px;
+    border-radius: 5px;
+}
+
+.about-album {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.album-tracklist-title {
+    font-size: 16px;
+}
+
+.album-tracklist-artist {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #5a5a5a;
+}
+
+.album-separator {
+    width: 100%;
+    height: 2px;
+    background: #585858;
+}
+
+.album-tracklist-grid {
+    width: 100%;
+    padding: 15px 20px;
+    display: grid;
+    row-gap: 10px;
+    grid-template-columns: repeat(1, 260px);
+    grid-auto-rows: 45px;
+}
+
+.album-grid {
+    position: relative;
+    display: flex;
+    border-radius: 10px;
+} 
+
+.album-grid-img {
+    width: 45px;
+    border-radius: 10px;
+}
+
+.about-track-album {
+    margin-left: 10px;
+    width: 210px;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.album-track-title {
+    height: 15px;
+    font-size: 13px;
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+}
+
+.album-track-artist {
+    height: 15px;
+    margin-top: 3px;
+    font-size: 13px;
+    color: #5a5a5a;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* МИНИ-ПЛЕЕР */
+.mini-player {
+    margin-top: 20px;
+    padding: 20px;
+    width: 100%;
+    background: #d8d8d8;
+    border-radius: 10px;
+    display: none;
+}
+
+.mini-player__hat {
+    display: flex;
+}
+
+.mini-player-track_cover {
+    width: 80px;
+    border-radius: 10px;
+}
+
+.bok {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    margin-left: 10px;
+}
+
+.mini-player-track-about {
+    font-weight: 700;
+}
+
+.mini-player-track-title {
+    margin-top: 8px;
+    font-size: 18px;
+    height: 20px;
+    width: 340px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mini-player-track-artist {
+    height: 18px;
+    font-size: 16px;
+    color: #5a5a5a;
+    width: 340px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.mini-player-progress-bar {
+    cursor: pointer;
+    width: 100%;
+    height: 6px;
+    border-radius: 25px;
+    accent-color: black;
+}
+
+.mini-player-song-time {
+    font-weight: 700;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mini-player__player {
+    margin-top: 15px;
+    width: 100%;
+    padding: 8px 20px;
+    background: #787878;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: space-between;
+}
+
+
+/* ВСЕ СИНГЛЫ */
+.all-single {
+    position: absolute;
+    top: 0;
+    padding: 20px 25px;
+    width: 100%;
+    height: 465px;
+    overflow: auto;
+    background: #d8d8d8;
+    display: none;
+}
+
+.all-single .head {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.head .zag {
+    margin-left: 15px;
+    margin-right: 5px;
+}
+
+.all-singles-grid-set {
+    margin-top: 20px;
+    display: grid;
+    row-gap: 10px;
+    grid-template-columns: repeat(1, 350px);
+    grid-auto-rows: 50px;
+}
+
+.all-single-grid {
+    /* cursor: pointer; */
+    position: relative;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+}
+
+.all-single-grid img {
+    width: 50px;
+    border-radius: 10px;
+}
+
+.all-single-grid-about {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.all-single-grid-title {
+    font-size: 17px;
+}
+
+.all-single-grid-artist {
+    margin-top: 3px;
+    font-size: 15px;
+    color: #5a5a5a;
+}
+
+
+/* ВСЕ АЛЬБОМЫ */
+.all-album {
+    position: absolute;
+    top: 0;
+    background: #d8d8d8;
+    padding: 20px 25px;
+    width: 100%;
+    height: 465px;
+    overflow: auto;
+    display: none;
+}
+
+.all-album .head {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.all-albums-grid-set {
+    margin-top: 20px;
+    display: grid;
+    column-gap: 25px;
+    row-gap: 10px;
+    grid-template-columns: repeat(3, 100px);
+}
+
+
+/* АЛЬБОМ ПРИ НАВЕДЕНИИ */
+.albumOnHover {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    background: rgba(0, 0, 0, 0.55);
+    display: flex;
+    justify-content: center;
+}
+
+.albumOnHover img {
+    width: 40px;
+}
+
+
+/* СИНГЛЫ В ПРОФИЛЕ ПРИ НАВЕДЕНИИ */
+.profileSingleOnHover {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    border-radius: 10px;
+    width: 100%;
+    height: 45px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 9px;
+}
+
+.profileSingleOnHover img {
+    width: 27px;
+}
+
+
+/* СИНГЛЫ В МЕНЮ ПРИ НАВЕДЕНИИ */
+.allSingleOnHover {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    border-radius: 10px;
+    width: 100%;
+    height: 50px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+}
+
+.allSingleOnHover img {
+    width: 30px;
+}
+
+/* ТРЕКИ В АЛЬБОМЕ ПРИ НАВЕДЕНИИ */
+.albumTrackOnHover {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    border-radius: 10px;
+    width: 100%;
+    height: 45px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 9px;
+}
+
+.albumTrackOnHover img {
+    width: 27px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

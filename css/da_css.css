@@ -1,0 +1,139 @@
+.par::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.wrapper, .par {
+    width: 100%;
+    font-family: 'Nexa';
+}
+
+.cont {
+    margin: 0 auto;
+    width: 400px;
+    height: 483px;
+    background: #d8d8d8;
+    border-radius: 10px;
+    padding: 20px 25px;
+    overflow: auto;
+}
+
+.artists_list {
+    margin-top: 20px;
+    display: grid;
+    row-gap: 20px;
+    column-gap: 40px;
+    grid-template-columns: repeat(3, 90px);
+    grid-template-rows: repeat(1, 111px);
+    grid-auto-rows: 111px;
+}
+
+.zag {
+    font-weight: 600;
+    font-size: 19px;
+    color: #000;
+}
+
+.block_img {
+    width: 90px;
+    border-radius: 100px;
+    margin-bottom: 5px;
+}
+
+.card {
+    text-align: center;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.par {
+    width: 400px;
+    height: 483px;
+    background: #d8d8d8;
+    border-radius: 10px;
+    padding: 20px 25px;
+    overflow: auto;   
+    margin-left: 20px;
+}
+
+.par:first-child {
+    margin-left: 0;
+}
+
+.artists {
+    margin-top: 20px;
+    display: grid;
+    row-gap: 20px;
+    column-gap: 40px;
+    grid-template-columns: repeat(3, 90px);
+    grid-template-rows: repeat(1, 111px);
+    grid-auto-rows: 111px;
+}
+
+.oba {
+    display: flex;
+}
+
+/* ТРЕКЛИСТ */
+.tracklist {
+    margin-top: 20px;
+    width: 100%;
+    display: grid;
+    row-gap: 10px;
+    grid-template-columns: repeat(1, 350px);
+    grid-template-rows: repeat(1, 50px);
+    grid-auto-rows: 50px;
+}
+
+.track {
+    display: flex;
+    position: relative;
+    cursor: pointer;  
+}
+
+.track-img {
+    border-radius: 10px;
+}
+
+.track-about {
+    margin-left: 10px; 
+}
+
+.track-title {
+    font-weight: 700;
+    font-size: 16px;
+    margin-top: 7px;
+
+}
+
+.track-artist {
+    position: absolute;
+    bottom: 0;
+    font-weight: 700;
+    font-size: 15px;
+    color: #5a5a5a;
+    margin-bottom: 7px;
+    width: 290px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.onItemHoverTrack {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    padding: 10px 0 10px 10px;
+    border-radius: 10px;
+    display: none;
+}
+
+
+
+
+
+
+
+
+
