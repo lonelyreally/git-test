@@ -249,6 +249,18 @@ const photos_artists = [
 // СПИСОК ПЕСЕН
 const songs = [
     {
+        cover: 'images/GASPXR - JULIE POWERS!.jpg',
+        title: 'JULIE POWERS!',
+        artist_1: 'GASPXR',
+        audio: 'audio/GASPXR - JULIE POWERS!.m4a',
+    },
+    {
+        cover: 'images/GASPXR - KIM PINE.png',
+        title: 'KIM PINE',
+        artist_1: 'GASPXR',
+        audio: 'audio/GASPXR - KIM PINE.m4a',
+    },
+    {
         cover: 'images/kets4eki, asteria - adding it up.jpeg',
         title: 'adding it up',
         artist_1: 'kets4eki',
