@@ -249,6 +249,14 @@ const photos_artists = [
 // СПИСОК ПЕСЕН
 const songs = [
     {
+        cover: 'images/Anarchist Sanctuary, asteria, kets4eki - way it goes.png',
+        title: 'way it goes',
+        artist_1: 'Anarchist Sanctuary',
+        artist_2: 'asteria',
+        artist_3: 'kets4eki',
+        audio: 'albums/asteria/ASFRIDAYS/audio/Anarchist Sanctuary, asteria, kets4eki - way it goes.m4a',
+    },
+    {
         cover: 'images/GASPXR - JULIE POWERS!.jpg',
         title: 'JULIE POWERS!',
         artist_1: 'GASPXR',
@@ -1126,6 +1134,7 @@ const albums = [
         title: 'ASFRIDAYS',
         cover: 'albums/asteria/ASFRIDAYS/asteria, kets4eki - ASFRIDAYS.jpeg',
         songs: [
+        {title: 'way it goes', artists: ['Anarchist Sanctuary', 'asteria', 'kets4eki'], audio: 'albums/asteria/ASFRIDAYS/audio/Anarchist Sanctuary, asteria, kets4eki - way it goes.m4a'},
         {title: 'sorry not sorry', artists: ['Anarchist Sanctuary', 'asteria', 'kets4eki'], audio: 'albums/asteria/ASFRIDAYS/audio/Anarchist Sanctuary, asteria, kets4eki - sorry not sorry.m4a'},
         {title: 'RIGHT NOW', artists: ['Anarchist Sanctuary', 'asteria', 'kets4eki'], audio: 'albums/asteria/ASFRIDAYS/audio/Anarchist Sanctuary, asteria, kets4eki  - RIGHT NOW.m4a'},
         {title: 'WATCH ME BALL OUT', artists: ['Anarchist Sanctuary', 'asteria', 'kets4eki'], audio: 'albums/asteria/ASFRIDAYS/audio/Anarchist Sanctuary, asteria, kets4eki - WATCH ME BALL OUT.m4a'},
