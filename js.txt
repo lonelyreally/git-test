@@ -2062,97 +2062,65 @@ playSong_button.addEventListener("click", function() {
 })
 
 
-// ЗВУК ПЕСНИ (ОСНОВНОЙ ПЛЕЕР)
+// ЗВУК ПЕСНИ
 const audioplayerPlayer = document.querySelector('.audioplayer__player')
 const changeVolumeBox = audioplayerPlayer.querySelector('.change-volume-box')
 const volumeControl = audioplayerPlayer.querySelector('.volume-control')
+changeVolumeBox.style.display = 'none'
+
+volume_play_button.addEventListener('mouseenter', ()=> {changeVolumeBox.style.display = 'flex'})
+
+volumeControl.addEventListener('mouseleave', ()=> changeVolumeBox.style.display = 'none')
+
 const changeVolume = audioplayerPlayer.querySelector('.change-volume')
 
-// ЗВУК ПЕСНИ (МИНИ-ПЛЕЕР)
-const changeVolumeBoxMini = miniPlayer.querySelector('.change-volume-box')
-const volumeControlMini = miniPlayer.querySelector('.volume-control')
-const changeVolumeMini = miniPlayer.querySelector('.change-volume') 
-
-// Скрываем панели громкости по умолчанию
-changeVolumeBox.style.display = 'none'
-if (changeVolumeBoxMini) changeVolumeBoxMini.style.display = 'none'
-
-// Показываем/скрываем при наведении в основном плеере
-volume_play_button.addEventListener('mouseenter', () => { changeVolumeBox.style.display = 'flex' })
-volumeControl.addEventListener('mouseleave', () => changeVolumeBox.style.display = 'none')
-
-// Показываем/скрываем при наведении в мини-плеере
-if (miniVolumeBtn && changeVolumeBoxMini && volumeControlMini) {
-  miniVolumeBtn.addEventListener('mouseenter', () => { changeVolumeBoxMini.style.display = 'flex' })
-  volumeControlMini.addEventListener('mouseleave', () => changeVolumeBoxMini.style.display = 'none')
-}
-
-// Переменная для хранения громкости
 let currentVolume = changeVolume.value
 
-// Общая функция для обновления всех элементов интерфейса звука
-function updateVolumeInterface(volumeValue) {
-  audio.volume = volumeValue;
-  
-  // Синхронизируем положение обоих ползунков
-  changeVolume.value = volumeValue;
-  if (changeVolumeMini) changeVolumeMini.value = volumeValue;
-
-  // Находим иконку в зависимости от уровня звука
-  const iconSrc = volumeValue == 0 ? 'icons/mute-button.svg' : 'icons/unmute-button.svg';
-
-  // Меняем иконки на кнопках напрямую
-  if (volume_play_button) volume_play_button.src = iconSrc;
-  if (miniVolumeBtn) miniVolumeBtn.src = iconSrc;
-}
-
-// Слушатель для основного ползунка
 changeVolume.addEventListener('input', (event) => {
-  const value = event.target.value;
-  updateVolumeInterface(value);
-  if (value > 0) currentVolume = value; 
+    audio.volume = event.target.value
+    if(audio.volume == 0) {
+        volume_play_button.src = 'icons/mute-button.svg'
+    } else {
+        volume_play_button.src = 'icons/unmute-button.svg'
+    }
 })
 
-// Слушатель для ползунка в мини-плеере
-if (changeVolumeMini) {
-  changeVolumeMini.addEventListener('input', (event) => {
-    const value = event.target.value;
-    updateVolumeInterface(value);
-    if (value > 0) currentVolume = value;
-  })
-}
+const changeVolumeBoxMini = miniPlayer.querySelector('.change-volume-box')
+const volumeControlMini = miniPlayer.querySelector('.volume-control')
+changeVolumeBoxMini.style.display = 'none'
 
-// КЛИК ПО КНОПКЕ MUTE (ГЛАВНАЯ И В МИНИ-ПЛЕЕРЕ)
-function toggleMute(event) {
-  // Останавливаем всплытие события, чтобы mouseleave/click других элементов не мешали
-  event.stopPropagation(); 
-  
-  if (audio.volume > 0) {
-    currentVolume = audio.volume; // Запоминаем текущий звук
-    updateVolumeInterface(0);     // Полностью обнуляем звук и ползунки
-  } else {
-    const returnVolume = currentVolume > 0 ? currentVolume : 1;
-    updateVolumeInterface(returnVolume); // Восстанавливаем сохраненный уровень
-  }
-}
 
-// Универсальный обработчик клика для всего документа
-document.addEventListener('click', (event) => {
-  // Проверяем, нажали ли мы на кнопку громкости (в основном или мини-плеере)
-  const clickedButton = event.target.closest('.volume_play_button');
-  
-  if (clickedButton) {
-    event.stopPropagation(); // Блокируем баги всплытия событий
-    
+// MUTE ЗВУК 
+volume_play_button.addEventListener('click', ()=> {
     if (audio.volume > 0) {
-      currentVolume = audio.volume;
-      updateVolumeInterface(0);
+        currentVolume = audio.volume
+        audio.volume = 0;
+        changeVolume.value = 0
     } else {
-      const returnVolume = currentVolume > 0 ? currentVolume : 1;
-      updateVolumeInterface(returnVolume);
+        const returnVolume = currentVolume > 0 ? currentVolume : 1;
+        audio.volume = returnVolume
+        changeVolume.value = returnVolume
     }
-  }
-});
+
+    // костыли...............
+    if (volume_play_button.src.includes('icons/unmute-button.svg')) {
+        miniVolumeBtn.src = 'icons/mute-button.svg'
+    } else {
+        miniVolumeBtn.src = 'icons/unmute-button.svg'
+    }
+})
+
+const volumeButton = document.querySelectorAll('.volume_play_button')
+
+volumeButton.forEach(item => {
+    item.addEventListener('click', ()=> {
+        if (item.src.includes('icons/unmute-button.svg')) {
+            item.src = 'icons/mute-button.svg'
+        } else {
+            item.src = 'icons/unmute-button.svg'
+        }
+    })
+})
 
 
 // КНОПКИ ПАНЕЛИ
@@ -3205,6 +3173,7 @@ repeatSong_button.addEventListener('click', () => {
         }
     });
 });
+
 
 
 

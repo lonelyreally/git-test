@@ -805,8 +805,34 @@
 }
 
 
+/* УПРАВЛЕНИЕ ГРОМКОСТЬЮ ЗВУКА */
+.change-volume-box {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: -50px;
+    bottom: 130px;
+    transform: rotate(270deg);
+    width: 180px;
+    height: 29px;
+    border-radius: 100px;
+    background: #4a4a4a;
+    padding: 0 10px;
+}
 
+.change-volume {
+    background-color: pink;
+    accent-color: black;
+    cursor: pointer;
+    width: 100%;
+}
 
+.mini-player .change-volume-box {
+    height: 27px;
+    width: 116px;
+    right: -19px;
+    bottom: 100px;
+}
 
 
 
