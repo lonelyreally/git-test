@@ -1885,7 +1885,7 @@ function updateSong(track, customCover = null) {
             }
             appendSingle();
             appendAlbum();
-            artist_click.style.display = 'none';
+            artist_click.classList.remove('active');
             artistProfile.style.display = 'block';
         });
     
@@ -2073,18 +2073,14 @@ const changeVolumeBoxMini = miniPlayer.querySelector('.change-volume-box')
 const volumeControlMini = miniPlayer.querySelector('.volume-control')
 const changeVolumeMini = miniPlayer.querySelector('.change-volume') 
 
-// Скрываем панели громкости по умолчанию
-changeVolumeBox.style.display = 'none'
-if (changeVolumeBoxMini) changeVolumeBoxMini.style.display = 'none'
-
 // Показываем/скрываем при наведении в основном плеере
-volume_play_button.addEventListener('mouseenter', () => { changeVolumeBox.style.display = 'flex' })
-volumeControl.addEventListener('mouseleave', () => changeVolumeBox.style.display = 'none')
+volume_play_button.addEventListener('mouseenter', () => changeVolumeBox.classList.add('is-active'))
+volumeControl.addEventListener('mouseleave', () => changeVolumeBox.classList.remove('is-active'))
 
 // Показываем/скрываем при наведении в мини-плеере
 if (miniVolumeBtn && changeVolumeBoxMini && volumeControlMini) {
-  miniVolumeBtn.addEventListener('mouseenter', () => { changeVolumeBoxMini.style.display = 'flex' })
-  volumeControlMini.addEventListener('mouseleave', () => changeVolumeBoxMini.style.display = 'none')
+  miniVolumeBtn.addEventListener('mouseenter', () =>  changeVolumeBoxMini.classList.add('is-active'))
+  volumeControlMini.addEventListener('mouseleave', () => changeVolumeBoxMini.classList.remove('is-active'))
 }
 
 // Переменная для хранения громкости
@@ -2294,11 +2290,11 @@ const artist_click = document.querySelector('.artist-click')
 const close_artist = document.querySelector('.close-artist')
 
 songArtists.addEventListener('click', ()=> {
-    artist_click.style.display = 'block'
+    artist_click.classList.add('active')
 })
 
 close_artist.addEventListener('click', ()=> {
-    artist_click.style.display = 'none'
+    artist_click.classList.remove('active')
 })
 
 
@@ -3016,8 +3012,8 @@ for (let i = 0; i < blocks.length; i++) {
     buttons[i].addEventListener('click', ()=> {
     blocks.forEach(block => {
     block.style.display = 'none'
+    artist_click.classList.remove('active')
     blocks[i].style.display = 'block'
-    artist_click.style.display = 'none'
     artistProfile.style.display = 'none'
     alb.style.display = 'none'
     sloy.style.display = 'none'

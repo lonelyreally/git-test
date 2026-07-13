@@ -50,10 +50,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 150ms ease-in 0s;
 }
 
 .panel_btn:not(.clicked):hover {
     background-color: #696969;
+    transition: all 100ms ease-in 0s;
 }
 
 .clicked {
@@ -292,7 +294,14 @@
     bottom: 0;
     padding: 10px 15px 25px 15px;
     color: white;
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 130ms ease-in;
+}
+
+.artist-click.active {
+    opacity: 1;
+    visibility: visible;
 }
 
 .artist-click-hat {
@@ -818,6 +827,14 @@
     border-radius: 100px;
     background: #4a4a4a;
     padding: 0 10px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 200ms ease-in 0s;
+}
+
+.change-volume-box.is-active {
+    opacity: 1;
+    visibility: visible;
 }
 
 .change-volume {
@@ -833,6 +850,10 @@
     right: -19px;
     bottom: 100px;
 }
+
+
+
+
 
 
 
