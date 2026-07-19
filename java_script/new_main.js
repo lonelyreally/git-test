@@ -249,6 +249,55 @@ const photos_artists = [
 // СПИСОК ПЕСЕН
 const songs = [
     {
+        cover: 'albums/dmtboy/DMTCORE/dmtboy - DMTCORE.png',
+        title: 'ГИГАБАЙТЫ',
+        artist_1: 'dmtboy',
+        audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - ГИГАБАЙТЫ.m4a',
+    },
+    {
+        cover: 'albums/dmtboy/DMTCORE/dmtboy - DMTCORE.png',
+        title: 'СЛОВИЛ ЗВЕЗДУ',
+        artist_1: 'dmtboy',
+        audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - СЛОВИЛ ЗВЕЗДУ.m4a',
+    },
+    {
+        cover: 'albums/dmtboy/DMTCORE/dmtboy - DMTCORE.png',
+        title: 'ANFISA',
+        artist_1: 'dmtboy',
+        audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - ANFISA.mp3',
+    },
+    {
+        cover: 'albums/dmtboy/DMTCORE/dmtboy - DMTCORE.png',
+        title: 'ЭТУ И ТУ',
+        artist_1: 'dmtboy',
+        audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - ЭТУ И ТУ.m4a',
+    },
+    {
+        cover: 'albums/dmtboy/DMTCORE/dmtboy - DMTCORE.png',
+        title: 'ПЕРЕЗАРЯДКА 3',
+        artist_1: 'dmtboy',
+        audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - ПЕРЕЗАРЯДКА 3.m4a',
+    },
+    {
+        cover: 'albums/dmtboy/DMTCORE/dmtboy - DMTCORE.png',
+        title: 'FAKWRK',
+        artist_1: 'dmtboy',
+        audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - FAKWRK.m4a',
+    },
+    {
+        cover: 'images/Clover!, Vyzer - BAD HABIT!.jpeg',
+        title: 'BAD HABIT!',
+        artist_1: 'Vyzer',
+        artist_2: 'Clover!',
+        audio: 'audio/Clover!, Vyzer - BAD HABIT!.m4a',
+    },
+    {
+        cover: 'images/Vyzer - I GOT AN EMO CHICK WITH BALLS XD.jpg',
+        title: 'I GOT AN EMO CHICK WITH BALLS XD',
+        artist_1: 'Vyzer',
+        audio: 'audio/Vyzer - I GOT AN EMO CHICK WITH BALLS XD.m4a',
+    },
+    {
         cover: 'images/Anarchist Sanctuary, asteria, kets4eki - way it goes.png',
         title: 'way it goes',
         artist_1: 'Anarchist Sanctuary',
@@ -739,7 +788,7 @@ const songs = [
         cover: 'images/dmtboy - GET KRANK.jpg',
         title: 'GET KRANK',
         artist_1: 'dmtboy',
-        audio: 'audio/dmtboy - GET KRANK.m4a'
+        audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - GET KRANK.m4a'
     },
     {
         cover: 'images/dmtboy - OMGDBL.jpeg',
@@ -1429,6 +1478,39 @@ const albums = [
         {title: 'GET SO SCARED!', artists: ['UpVampin'], audio: ''},
         {title: 'horror movie/3', artists: ['UpVampin'], audio: ''},
         {title: 'HAPPY HALLOWEEN!', artists: ['UpVampin'], audio: ''},
+        ]
+    },
+    {
+        // dmtboy
+        artists: ['dmtboy'], 
+        title: 'DMTCORE',
+        cover: 'albums/dmtboy/DMTCORE/dmtboy - DMTCORE.png',
+        songs: [
+        {title: 'GET KRANK', artists: ['dmtboy'], audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - GET KRANK.m4a'},
+        {title: 'SUPA STA', artists: ['dmtboy'], audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - SUPA STA.m4a'},
+        {title: 'ЭТУ И ТУ', artists: ['dmtboy'], audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - ЭТУ И ТУ.m4a'},
+        {title: 'KONTAKT', artists: ['dmtboy'], audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - KONTAKT.m4a'},
+        {title: 'ГИГАБАЙТЫ', artists: ['dmtboy'], audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - ГИГАБАЙТЫ.m4a'},
+        {title: 'AMBASSADOR', artists: ['dmtboy'], audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - AMBASSADOR.m4a'},
+        {title: 'SKINNY', artists: ['dmtboy'], audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - SKINNY.m4a'},
+        {title: '3GP', artists: ['dmtboy'], audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - 3GP.m4a'},
+        {title: 'СЛОВИЛ ЗВЕЗДУ', artists: ['dmtboy'], audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - СЛОВИЛ ЗВЕЗДУ.m4a'},
+        {title: 'В СПАМ', artists: ['dmtboy'], audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - В СПАМ.m4a'},
+        {title: 'ИНЕТ', artists: ['dmtboy'], audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - ИНЕТ.m4a'},
+        {title: 'ВЫХОД', artists: ['dmtboy'], audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - ВЫХОД.m4a'},
+        {title: 'SELEBA', artists: ['dmtboy'], audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - SELEBA.m4a'},
+        {title: 'ANFISA', artists: ['dmtboy'], audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - ANFISA.mp3'},
+        {title: 'BIG FAIL', artists: ['dmtboy'], audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - BIG FAIL.m4a'},
+        {title: 'MDK', artists: ['dmtboy'], audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - MDK.m4a'},
+        {title: 'ПЕРЕЗАРЯДКА 3', artists: ['dmtboy'], audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - ПЕРЕЗАРЯДКА 3.m4a'},
+        {title: '100500', artists: ['dmtboy'], audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - 100500.m4a'},
+        {title: 'ГУДКИ', artists: ['dmtboy'], audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - ГУДКИ.m4a'},
+        {title: 'ВСЁ КЛЁВА', artists: ['dmtboy'], audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - ВСЁ КЛЁВА.mp3'},
+        {title: 'КОММЕНТ', artists: ['dmtboy'], audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - КОММЕНТ.m4a'},
+        {title: 'НОВЫЕ', artists: ['dmtboy', 'diklor'], audio: 'albums/dmtboy/DMTCORE/audio/dmtboy, diklor - НОВЫЕ.m4a'},
+        {title: 'FAKWRK', artists: ['dmtboy'], audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - FAKWRK.m4a'},
+        {title: 'ХЛОПАЙ', artists: ['dmtboy'], audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - ХЛОПАЙ.m4a'},
+        {title: 'RIGNTON', artists: ['dmtboy'], audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - RINGTON.mp3'},
         ]
     },
     {
