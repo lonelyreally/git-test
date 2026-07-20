@@ -298,6 +298,12 @@ const songs = [
         audio: 'audio/Vyzer - I GOT AN EMO CHICK WITH BALLS XD.m4a',
     },
     {
+        cover: 'images/xaduma - GAH DAMN.jpg',
+        title: 'GAH DAMN',
+        artist_1: 'xaduma',
+        audio: 'audio/xaduma - GAH DAMN.m4a',
+    },
+    {
         cover: 'images/Anarchist Sanctuary, asteria, kets4eki - way it goes.png',
         title: 'way it goes',
         artist_1: 'Anarchist Sanctuary',
@@ -427,6 +433,20 @@ const songs = [
         title: 'make you sweat',
         artist_1: 'asteria',
         audio: 'albums/asteria/niche princess/audio/asteria - make you sweat.m4a',
+    },
+    {
+        cover: 'albums/asteria/SCARLET ASHES/asteria - SCARLET ASHES.png',
+        title: 'that’s okay...',
+        artist_1: 'asteria',
+        audio: 'albums/asteria/SCARLET ASHES/audio/asteria - that`s okay....m4a',
+    },
+    {
+        cover: 'images/Anarchist Sanctuary, asteria, kets4eki - different day, same drugs.png',
+        title: 'different day, same drugs',
+        artist_1: 'Anarchist Sanctuary',
+        artist_2: 'asteria',
+        artist_3: 'kets4eki',
+        audio: 'albums/asteria/ASFRIDAYS/audio/Anarchist Sanctuary, asteria, kets4eki - different day, same drugs.mp3',
     },
     {
         cover: 'images/Anarchist Sanctuary, asteria, kets4eki  - RIGHT NOW.jpg',
@@ -1183,6 +1203,7 @@ const albums = [
         title: 'ASFRIDAYS',
         cover: 'albums/asteria/ASFRIDAYS/asteria, kets4eki - ASFRIDAYS.jpeg',
         songs: [
+        {title: 'different day, same drugs', artists: ['Anarchist Sanctuary', 'asteria', 'kets4eki'], audio: 'albums/asteria/ASFRIDAYS/audio/Anarchist Sanctuary, asteria, kets4eki - different day, same drugs.mp3'},
         {title: 'way it goes', artists: ['Anarchist Sanctuary', 'asteria', 'kets4eki'], audio: 'albums/asteria/ASFRIDAYS/audio/Anarchist Sanctuary, asteria, kets4eki - way it goes.m4a'},
         {title: 'sorry not sorry', artists: ['Anarchist Sanctuary', 'asteria', 'kets4eki'], audio: 'albums/asteria/ASFRIDAYS/audio/Anarchist Sanctuary, asteria, kets4eki - sorry not sorry.m4a'},
         {title: 'RIGHT NOW', artists: ['Anarchist Sanctuary', 'asteria', 'kets4eki'], audio: 'albums/asteria/ASFRIDAYS/audio/Anarchist Sanctuary, asteria, kets4eki  - RIGHT NOW.m4a'},
@@ -1254,9 +1275,9 @@ const albums = [
         title: 'SCARLET ASHES',
         cover: 'albums/asteria/SCARLET ASHES/asteria - SCARLET ASHES.png',
         songs: [
-        {title: 'that’s okay...', artists: ['asteria'], audio: ''},
-        {title: 'i hate your friends', artists: ['asteria'], audio: ''},
-        {title: 'lie about this', artists: ['asteria'], audio: ''},
+        {title: 'that’s okay...', artists: ['asteria'], audio: 'albums/asteria/SCARLET ASHES/audio/asteria - that`s okay....m4a'},
+        {title: 'i hate your friends', artists: ['asteria'], audio: 'albums/asteria/SCARLET ASHES/audio/asteria - i hate your friends.m4a'},
+        {title: 'lie about this', artists: ['asteria'], audio: 'albums/asteria/SCARLET ASHES/audio/asteria - lie about this.m4a'},
         ]
     },
     {
@@ -1306,27 +1327,27 @@ const albums = [
         title: 'Cute Songs For Gangsters',
         cover: 'albums/asteria/Cute Songs For Gangsters/asteria, 6arelyhuman - Cute Songs For Gangsters.png',
         songs: [
-        {title: 'BLOODBATH', artists: ['6arelyhuman', 'asteria'], audio: ''},
-        {title: 'HYPNOTIZED', artists: ['6arelyhuman', 'asteria'], audio: ''},
-        {title: 'RED MERCEDES', artists: ['6arelyhuman', 'asteria'], audio: ''},
-        {title: 'FADE AWAY', artists: ['6arelyhuman', 'asteria'], audio: ''},
-        {title: 'Make Me Famous', artists: ['6arelyhuman', 'asteria'], audio: ''},
+        {title: 'BLOODBATH', artists: ['6arelyhuman', 'asteria'], audio: 'albums/asteria/Cute Songs For Gangsters/audio/6arelyhuman, asteria - BLOODBATH.m4a'},
+        {title: 'HYPNOTIZED', artists: ['6arelyhuman', 'asteria'], audio: 'albums/asteria/Cute Songs For Gangsters/audio/6arelyhuman, asteria - HYPNOTIZED.m4a'},
+        {title: 'RED MERCEDES', artists: ['6arelyhuman', 'asteria'], audio: 'albums/asteria/Cute Songs For Gangsters/audio/6arelyhuman, asteria - RED MERCEDES.m4a'},
+        {title: 'FADE AWAY', artists: ['6arelyhuman', 'asteria'], audio: 'albums/asteria/Cute Songs For Gangsters/audio/6arelyhuman, asteria - FADE AWAY.m4a'},
+        {title: 'Make Me Famous', artists: ['6arelyhuman', 'asteria'], audio: 'albums/asteria/Cute Songs For Gangsters/audio/6arelyhuman, asteria - Make Me Famous.m4a'},
         ]
     },
     {
         // asteria, kets4eki
-        artists: ['asteria', 'kets4eki'], 
+        artists: ['kets4eki','asteria'], 
         title: 'RAVE2DEATH',
         cover: 'albums/asteria/RAVE2DEATH/asteria, kets4eki - RAVE2DEATH.jpg',
         songs: [
-        {title: '#RAVELIFE', artists: ['asteria', 'kets4eki'], audio: ''},
-        {title: 'FADED', artists: ['asteria', 'kets4eki'], audio: ''},
-        {title: 'DOLLAR BILLS', artists: ['asteria', 'kets4eki'], audio: ''},
-        {title: 'TRYNA FUCK (SPARTA)', artists: ['asteria', 'kets4eki'], audio: ''},
-        {title: 'COME ON', artists: ['asteria', 'kets4eki'], audio: ''},
-        {title: 'i fucked her friend', artists: ['asteria', 'kets4eki'], audio: ''},
-        {title: 'felling nothing', artists: ['asteria', 'kets4eki', '6arelyhuman'], audio: ''},
-        {title: 'COUNT IT UP', artists: ['asteria', 'kets4eki', 'hubithekid'], audio: ''},
+        {title: '#RAVELIFE', artists: ['kets4eki','asteria'], audio: 'albums/asteria/RAVE2DEATH/audio/kets4eki, asteria - RAVELIFE.mp3'},
+        {title: 'FADED', artists: ['kets4eki','asteria'], audio: 'albums/asteria/RAVE2DEATH/audio/kets4eki, asteria - FADED.mp3'},
+        {title: 'DOLLAR BILLS', artists: ['kets4eki','asteria'], audio: 'albums/asteria/RAVE2DEATH/audio/kets4eki, asteria - DOLLAR BILLS.mp3'},
+        {title: 'TRYNA FUCK (SPARTA)', artists: ['kets4eki','asteria'], audio: 'albums/asteria/RAVE2DEATH/audio/kets4eki, asteria - TRYNA FUCK (SPARTA).mp3'},
+        {title: 'COME ON', artists: ['kets4eki','asteria'], audio: 'albums/asteria/RAVE2DEATH/audio/kets4eki, asteria - COME ON.mp3'},
+        {title: 'i fucked her friend', artists: ['kets4eki','asteria'], audio: 'albums/asteria/RAVE2DEATH/audio/kets4eki, asteria - i fucked her friend.mp3'},
+        {title: 'felling nothing', artists: ['kets4eki', 'asteria', '6arelyhuman'], audio: 'albums/asteria/RAVE2DEATH/audio/kets4eki, asteria, 6arelyhuman - feeling nothing.mp3'},
+        {title: 'COUNT IT UP', artists: ['kets4eki', 'asteria', 'hubithekid'], audio: 'albums/asteria/RAVE2DEATH/audio/kets4eki, asteria, hubithekid - COUNT IT UP.mp3'},
         ]
     },
     {
