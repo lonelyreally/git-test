@@ -249,6 +249,13 @@ const photos_artists = [
 // СПИСОК ПЕСЕН
 const songs = [
     {
+        cover: 'images/asteria, an4rch - why can’t i be happy.png',
+        title: 'why can’t i be happy',
+        artist_1: 'asteria',
+        artist_2: 'an4rch',
+        audio: 'audio/asteria x an4rch - why can’t i be happy.m4a',
+    },
+    {
         cover: 'albums/dmtboy/DMTCORE/dmtboy - DMTCORE.png',
         title: 'ГИГАБАЙТЫ',
         artist_1: 'dmtboy',
