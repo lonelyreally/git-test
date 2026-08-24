@@ -50,7 +50,7 @@ const photos_artists = [
     },
     {
         text: 'xaduma',
-        photo: 'artists/xaduma.jpg',
+        photo: 'artists/xaduma.png',
     },
     {
         text: 'EPITXME',
@@ -248,6 +248,88 @@ const photos_artists = [
 
 // СПИСОК ПЕСЕН
 const songs = [
+    {
+        cover: 'images/Clover! - GOIN DUBM!.png',
+        title: 'GOIN DUBM!',
+        artist_1: 'Clover!',
+        audio: 'audio/Clover! - GOIN DUMB!.m4a',
+    },
+    {
+        cover: 'images/asteria - BAD FOR YOU.png',
+        title: 'BAD FOR YOU',
+        artist_1: 'asteria',
+        audio: 'audio/asteria - BAD FOR YOU.mp3',
+    },
+    {
+        cover: 'images/xaduma, Vyzer - DOWN&DIRTY.png',
+        title: 'DOWN&DIRTY',
+        artist_1: 'xaduma',
+        artist_2: 'Vyzer',
+        audio: 'audio/xaduma, Vyzer - DOWN&DIRTY.mp3',
+    },
+    {
+        cover: 'images/Anarchist Sanctuary, asteria, kets4eki  - i don’t care.png',
+        title: 'i don’t care',
+        artist_1: 'Anarchist Sanctuary',
+        artist_2: 'asteria',
+        artist_3: 'kets4eki',
+        audio: 'albums/asteria/ASFRIDAYS/audio/Anarchist Sanctuary, asteria, kets4eki  - i don’t care.m4a',
+    },
+    {
+        cover: 'images/Anarchist Sanctuary, asteria, kets4eki  - serotonin.png',
+        title: 'serotonin',
+        artist_1: 'Anarchist Sanctuary',
+        artist_2: 'asteria',
+        artist_3: 'kets4eki',
+        audio: 'albums/asteria/ASFRIDAYS/audio/Anarchist Sanctuary, asteria, kets4eki  - serotonin.mp3',
+    },
+    {
+        cover: 'images/Anarchist Sanctuary, asteria, kets4eki  - no_more.png',
+        title: 'no_more',
+        artist_1: 'Anarchist Sanctuary',
+        artist_2: 'asteria',
+        artist_3: 'kets4eki',
+        audio: 'albums/asteria/ASFRIDAYS/audio/Anarchist Sanctuary, asteria, kets4eki  - no_more.mp3',
+    },
+    {
+        cover: 'images/Anarchist Sanctuary, asteria, kets4eki  - laughin to the bank.png',
+        title: 'laughin to the bank',
+        artist_1: 'Anarchist Sanctuary',
+        artist_2: 'asteria',
+        artist_3: 'kets4eki',
+        audio: 'albums/asteria/ASFRIDAYS/audio/Anarchist Sanctuary, asteria, kets4eki  - laughin to the bank.mp3',
+    },
+    {
+        cover: 'albums/clout/ОКО/clout - ОКО.webp',
+        title: 'Миром правит',
+        artist_1: 'clout',
+        audio: 'albums/clout/ОКО/audio/clout - Миром правит.m4a',
+    },
+    {
+        cover: 'albums/clout/ОКО/clout - ОКО.webp',
+        title: 'Ad4m',
+        artist_1: 'clout',
+        audio: 'albums/clout/ОКО/audio/clout - Ad4m.m4a',
+    },
+    {
+        cover: 'albums/clout/ОКО/clout - ОКО.webp',
+        title: 'BoneSSS',
+        artist_1: 'clout',
+        audio: 'albums/clout/ОКО/audio/clout - BoneSSS.m4a',
+    },
+    {
+        cover: 'albums/clout/ОКО/clout - ОКО.webp',
+        title: 'Чудо Света',
+        artist_1: 'clout',
+        audio: 'albums/clout/ОКО/audio/clout - Чудо Света.m4a',
+    },
+    {
+        cover: 'images/sykcore, EPITXME - AINT SLOWING DOWN!.jpeg',
+        title: 'AINT SLOWING DOWN!',
+        artist_1: 'sykcore',
+        artist_2: 'EPITXME',
+        audio: 'audio/sykcore, EPITXME - AINT SLOWING DOWN!',
+    },
     {
         cover: 'images/asteria, an4rch - why can’t i be happy.png',
         title: 'why can’t i be happy',
@@ -1210,6 +1292,10 @@ const albums = [
         title: 'ASFRIDAYS',
         cover: 'albums/asteria/ASFRIDAYS/asteria, kets4eki - ASFRIDAYS.jpeg',
         songs: [
+        {title: 'i don’t care', artists: ['Anarchist Sanctuary', 'asteria', 'kets4eki'], audio: 'albums/asteria/ASFRIDAYS/audio/Anarchist Sanctuary, asteria, kets4eki  - i don’t care.m4a'},
+        {title: 'serotonin', artists: ['Anarchist Sanctuary', 'asteria', 'kets4eki'], audio: 'albums/asteria/ASFRIDAYS/audio/Anarchist Sanctuary, asteria, kets4eki  - serotonin.mp3'},
+        {title: 'no_more', artists: ['Anarchist Sanctuary', 'asteria', 'kets4eki'], audio: 'albums/asteria/ASFRIDAYS/audio/Anarchist Sanctuary, asteria, kets4eki  - no_more.mp3'},
+        {title: 'laughin to the bank', artists: ['Anarchist Sanctuary', 'asteria', 'kets4eki'], audio: 'albums/asteria/ASFRIDAYS/audio/Anarchist Sanctuary, asteria, kets4eki  - laughin to the bank.mp3'},
         {title: 'different day, same drugs', artists: ['Anarchist Sanctuary', 'asteria', 'kets4eki'], audio: 'albums/asteria/ASFRIDAYS/audio/Anarchist Sanctuary, asteria, kets4eki - different day, same drugs.mp3'},
         {title: 'way it goes', artists: ['Anarchist Sanctuary', 'asteria', 'kets4eki'], audio: 'albums/asteria/ASFRIDAYS/audio/Anarchist Sanctuary, asteria, kets4eki - way it goes.m4a'},
         {title: 'sorry not sorry', artists: ['Anarchist Sanctuary', 'asteria', 'kets4eki'], audio: 'albums/asteria/ASFRIDAYS/audio/Anarchist Sanctuary, asteria, kets4eki - sorry not sorry.m4a'},
@@ -1564,6 +1650,17 @@ const albums = [
     },
     {
         // clout
+        artists: ['clout'], 
+        title: 'ОКО',
+        cover: 'albums/clout/ОКО/clout - ОКО.webp',
+        songs: [
+        {title: 'Миром правит', artists: ['clout'], audio: 'albums/clout/ОКО/audio/clout - Миром правит.m4a'},
+        {title: 'Ad4m', artists: ['clout'], audio: 'albums/clout/ОКО/audio/clout - Ad4m.m4a'},
+        {title: 'BoneSSS', artists: ['clout'], audio: 'albums/clout/ОКО/audio/clout - BoneSSS.m4a'},
+        {title: 'Чудо Света', artists: ['clout'], audio: 'albums/clout/ОКО/audio/clout - Чудо Света.m4a'}
+        ]
+    },
+    {
         artists: ['clout'], 
         title: 'КИБЕРПСИХОЗ.ERROR',
         cover: 'albums/clout/КИБЕРПСИХОЗ.ERROR/clout - КИБЕРПСИХОЗ.ERROR.png',
