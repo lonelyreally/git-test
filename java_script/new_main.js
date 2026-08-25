@@ -189,10 +189,6 @@ const photos_artists = [
         photo: 'artists/xxxmanera.jpeg',
     },
     {
-        text: 'мистер модератор',
-        photo: 'artists/мистер модератор.jpg',
-    },
-    {
         text: 'SODA LUV',
         photo: 'artists/SODA LUV.jpg',
     },
@@ -885,13 +881,6 @@ const songs = [
         artist_2: 'kets4eki',
         artist_3: 'Syris',
         audio: 'audio/skypebf, kets4eki, Syris - talk shit.m4a'
-    },
-    {
-        cover: 'images/мистер модератор, SODA LUV - занозы.jpeg',
-        title: "занозы",
-        artist_1: 'мистер модератор',
-        artist_2: 'SODA LUV',
-        audio: 'audio/мистер модератор, SODA LUV - занозы.m4a'
     },
     {
         cover: 'images/dmtboy - GET KRANK.jpg',
