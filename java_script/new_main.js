@@ -245,7 +245,7 @@ const photos_artists = [
 // СПИСОК ПЕСЕН
 const songs = [
     {
-        cover: 'images/Clover! - GOIN DUMB!.png',
+        cover: 'images/Clover! - GOIN DUMB!.jpg',
         title: 'GOIN DUMB!',
         artist_1: 'Clover!',
         audio: 'audio/Clover! - GOIN DUMB!.m4a',
