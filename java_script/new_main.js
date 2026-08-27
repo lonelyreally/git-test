@@ -1720,7 +1720,7 @@ const albums = [
         // wikuro, Vee4r
         artists: ['wikuro','Vee4r'], 
         title: 'KNIVES EP',
-        cover: 'albums/Vee4r/KNIVES EP/wikuro, Vee4r - KNIVES EP.jpg',
+        cover: 'albums/wikuro/KNIVES EP/wikuro, Vee4r - KNIVES EP.jpg',
         songs: [
         {title: 'WELCOME TO THE STABBING', artists: ['wikuro', 'Vee4r'], audio: ''},
         {title: 'KNIVES', artists: ['wikuro', 'Vee4r'], audio: 'albums/wikuro/KNIVES EP/audio/wikuro, Vee4r - KNIVES.mp3'},
