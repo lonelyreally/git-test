@@ -245,6 +245,13 @@ const photos_artists = [
 // СПИСОК ПЕСЕН
 const songs = [
     {
+        cover: 'images/d3r, kets4eki - NO FLIRTS.png',
+        title: 'NO FLIRTS',
+        artist_1: 'd3r',
+        artist_2: 'kets4eki',
+        audio: 'audio/d3r, kets4eki - NO FLIRTS.m4a',
+    },
+    {
         cover: 'images/Clover! - GOIN DUMB!.jpg',
         title: 'GOIN DUMB!',
         artist_1: 'Clover!',
