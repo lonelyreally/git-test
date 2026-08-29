@@ -277,6 +277,14 @@ const songs = [
         audio: 'audio/xaduma, Vyzer - DOWN&DIRTY.mp3',
     },
     {
+        cover: 'images/444pluto, kets4eki, HAR$h - SIP THAT!.png',
+        title: 'SIP THAT!',
+        artist_1: '444pluto',
+        artist_2: 'kets4eki',
+        artist_3: 'HAR$h',
+        audio: 'audio/444pluto, kets4eki, HAR$h - SIP THAT!.mp3',
+    },
+    {
         cover: 'images/Anarchist Sanctuary, asteria, kets4eki  - i don’t care.png',
         title: 'i don’t care',
         artist_1: 'Anarchist Sanctuary',
