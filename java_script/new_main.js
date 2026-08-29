@@ -245,6 +245,12 @@ const photos_artists = [
 // СПИСОК ПЕСЕН
 const songs = [
     {
+        cover: 'images/asteria - SEXY GIRL.png',
+        title: 'SEXY GIRL',
+        artist_1: 'asteria',
+        audio: 'audio/asteria - SEXY GIRL.m4a',
+    },
+    {
         cover: 'images/d3r, kets4eki - NO FLIRTS.png',
         title: 'NO FLIRTS',
         artist_1: 'd3r',
