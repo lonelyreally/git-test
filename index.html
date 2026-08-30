@@ -17,15 +17,14 @@
                         <div class="panel">
                             <div class="logo"><img src="icons/logo.svg" alt=""></div>
                             <div class="panel-category">
-                                <div class="panel__audioplayer but panel_btn"><img src="icons/audioplayer-icon.svg" alt=""></div>
-                                <div class="panel__playlist but panel_btn"><img src="icons/playlist-logo.svg" alt=""></div>
-                                <div class="panel__artists but panel_btn"><img src="icons/artists-icon.svg" alt=""></div>
+                                <div class="but panel_btn active" data-tab="audioplayer"><img src="icons/audioplayer-icon.svg" alt=""></div>
+                                <div class="but panel_btn" data-tab="playlist"><img src="icons/playlist-logo.svg" alt=""></div>
+                                <div class="but panel_btn" data-tab="artists"><img src="icons/artists-icon.svg" alt=""></div>
                             </div>
-                            <!-- <div class="panel__profile but panel_btn panel_btn_hover"><img src="icons/profile-icon.svg" alt=""></div> -->
                         </div>
                         <div class="player">
-                            <!-- ПЕСНЯ В ПЛЕЕРЕ -->
-                            <div class="music_player block">
+                            <!-- ГЛАВНАЯ (ПЛЕЕР) -->
+                            <div class="music_player pane active" id="audioplayer">
                                     <div class="song_cover">
                                         <img class="song_img" width="250px" src="" alt="">
                                     </div>
@@ -59,12 +58,12 @@
                                         </div>
                             </div>
                             <!-- ПЛЕЙЛИСТ -->
-                            <div class="playlist block">
+                            <div class="playlist pane" id="playlist">
                                 <div class="zag">Мои треки</div>
                                 <div class="tracklist"></div>
                             </div>
                             <!-- СПИСОК ИСПОЛНИТЕЛЕЙ -->
-                            <div class="artists_list block">
+                            <div class="artists_list pane" id="artists">
                                 <div class="zag">Исполнители</div>
                                 <div class="artists"></div>
                             </div>
@@ -77,7 +76,7 @@
                                 <div class="test-grid"></div>
                             </div>
                             <!-- ПРОФИЛЬ ИСПОЛНИТЕЛЯ -->
-                            <div class="artist-profile">
+                            <div class="artist-profile" id="artist-profile">
                                 <img class="but close-artist-profile" src="icons/close-artist-profile.svg" alt="">
                                 <div class="artist-profile-hat">
                                     <img class="artist-profile-img" src="" width="100px" alt="">
@@ -112,13 +111,6 @@
                                         </div>
                                         <div class="album-separator"></div>
                                         <div class="album-tracklist-grid">
-                                            <!-- <div class="album-grid">
-                                                <img class="album-grid-img" src="albums/Kai Angel/Heavy Metal 2/9mice, Kai Angel - Heavy Metal 2.png" alt="">
-                                                <div class="about-track-album">
-                                                    <div class="album-track-title"></div>
-                                                    <div class="album-track-artist"></div>
-                                                </div>
-                                            </div> -->
                                         </div>
                                     </div>
                             </div>
@@ -157,7 +149,7 @@
             </div>
             <div class="mini-player">
                 <div class="mini-player__hat">
-                    <img class="mini-player-track_cover" src="images/Anarchist Sanctuary, asteria, kets4eki - sorry not sorry.jpg" alt="">
+                    <img class="mini-player-track_cover" src="" alt="">
                     <div class="bok">
                         <div class="mini-player-track-about">
                             <div class="mini-player-track-title"></div>
@@ -187,7 +179,11 @@
                 </div>
             </div>
         </div>
-    </div>
+        <div class="open-cover-back"></div>
+        <div class="open-cover">
+            <div class="close-open-cover"><img src="icons/maybe-new-close.svg" alt=""></div>
+            <img class="open-cover-img" src="" alt="">
+        </div>
 
     <script src="java_script/new_main.js"></script>
 </body>

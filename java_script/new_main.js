@@ -11,6 +11,7 @@ const volume_play_button = document.querySelector('.volume_play_button')
 const songCover = document.querySelector('.song_img')
 const songTitle = document.querySelector('.song_info__title')
 const songArtists = document.querySelector('.list_of_artists')
+const openCoverImg = document.querySelector('.open-cover-img')
 
 
 // ПРОГРЕСС
@@ -635,6 +636,31 @@ const songs = [
         title: 'TOLD HER NAH!',
         artist_1: 'EPITXME',
         audio: 'albums/EPITXME/SELFISH/audio/EPITXME - TOLD HER NAH!.m4a'
+    },
+    {
+        cover: 'images/EPITXME - TOLD HER NAH!.jpeg',
+        title: 'CHANCE!',
+        artist_1: 'EPITXME',
+        audio: 'albums/EPITXME/SELFISH/audio/EPITXME - CHANCE!.m4a'
+    },
+    {
+        cover: 'images/EPITXME - TOLD HER NAH!.jpeg',
+        title: 'CAN’T GET ENOUGH!',
+        artist_1: 'EPITXME',
+        audio: 'albums/EPITXME/SELFISH/audio/EPITXME - CAN’T GET ENOUGH!.m4a'
+    },
+    {
+        cover: 'images/EPITXME - TOLD HER NAH!.jpeg',
+        title: 'NAH!',
+        artist_1: 'EPITXME',
+        audio: 'albums/EPITXME/SELFISH/audio/EPITXME - NAH!.m4a'
+    },
+    {
+        cover: 'images/EPITXME - TOLD HER NAH!.jpeg',
+        title: 'ON MY OWN!',
+        artist_1: 'EPITXME',
+        artist_2: '4ortake',
+        audio: 'albums/EPITXME/SELFISH/audio/EPITXME, 4ortake - ON MY OWN!.m4a'
     },
     {
         cover: 'images/Vee4r, EPITXME - NO CHANCE!.jpg',
@@ -1292,6 +1318,13 @@ const songs = [
         artist_2: 'xaduma',
         audio: 'albums/EPITXME/UNAVOIDABLE/audio/EPITXME, xaduma - LA LA LA.m4a'
     },
+    {
+        cover: 'images/EPITXME, xaduma - LA LA LA.png',
+        title: 'TO THA BEAT! (Remix)',
+        artist_1: 'EPITXME',
+        artist_2: 'xaduma',
+        audio: 'albums/EPITXME/UNAVOIDABLE/audio/EPITXME, xaduma - TO THA BEAT! (Remix).m4a'
+    },
 ]
 
 // СПИСОК АЛЬБОМОВ
@@ -1527,14 +1560,14 @@ const albums = [
         title: 'SELFISH',
         cover: 'albums/EPITXME/SELFISH/EPITXME - SELFISH.png',
         songs: [
-        {title: 'SELFISH!', artists: ['EPITXME'], audio: ''},
-        {title: 'WHERE WERE YOU?', artists: ['EPITXME'], audio: ''},
-        {title: 'CANT GET ENOUGH!', artists: ['EPITXME'], audio: ''},
-        {title: 'CHANCE!', artists: ['EPITXME'], audio: ''},
-        {title: 'ON MY OWN!', artists: ['EPITXME', '4ortake'], audio: ''},
+        {title: 'SELFISH!', artists: ['EPITXME'], audio: 'albums/EPITXME/SELFISH/audio/EPITXME - SELFISH!.m4a'},
+        {title: 'WHERE WERE YOU?', artists: ['EPITXME'], audio: 'albums/EPITXME/SELFISH/audio/EPITXME - WHERE WERE YOU.m4a'},
+        {title: 'CAN’T GET ENOUGH!', artists: ['EPITXME'], audio: 'albums/EPITXME/SELFISH/audio/EPITXME - CAN’T GET ENOUGH!.m4a'},
+        {title: 'CHANCE!', artists: ['EPITXME'], audio: 'albums/EPITXME/SELFISH/audio/EPITXME - CHANCE!.m4a'},
+        {title: 'ON MY OWN!', artists: ['EPITXME', '4ortake'], audio: 'albums/EPITXME/SELFISH/audio/EPITXME, 4ortake - ON MY OWN!.m4a'},
         {title: 'TOLD HER NAH!', artists: ['EPITXME'], audio: 'albums/EPITXME/SELFISH/audio/EPITXME - TOLD HER NAH!.m4a'},
-        {title: 'I DONT BELIEVE!', artists: ['EPITXME'], audio: ''},
-        {title: 'NAH!', artists: ['EPITXME'], audio: ''},
+        {title: 'I DON’T BELIEVE!', artists: ['EPITXME'], audio: 'albums/EPITXME/SELFISH/audio/EPITXME - I DON’T BELIEVE!.m4a'},
+        {title: 'NAH!', artists: ['EPITXME'], audio: 'albums/EPITXME/SELFISH/audio/EPITXME - NAH!.m4a'},
         ]
     },
     {
@@ -1542,16 +1575,16 @@ const albums = [
         title: 'UNAVOIDABLE',
         cover: 'albums/EPITXME/UNAVOIDABLE/EPITXME - UNAVOIDABLE.png',
         songs: [
-        {title: 'DISCUSSION (Skit)', artists: ['EPITXME', 'sxcredmane'], audio: ''},
-        {title: '#ELECTRONICSWAG!', artists: ['EPITXME', 'sxcredmane'], audio: ''},
+        {title: 'DISCUSSION (Skit)', artists: ['EPITXME', 'sxcredmane'], audio: 'albums/EPITXME/UNAVOIDABLE/audio/EPITXME, sxcredmane - DISCUSSION (Skit).m4a'},
+        {title: '#ELECTRONICSWAG!', artists: ['EPITXME', 'sxcredmane'], audio: 'albums/EPITXME/UNAVOIDABLE/audio/EPITXME, sxcredmane - ELECTONICSWAG!.m4a'},
         {title: 'ANYTHING YOU WANT!', artists: ['EPITXME', 'sxcredmane'], audio: 'albums/EPITXME/UNAVOIDABLE/audio/EPITXME, sxcredmane - ANYTHING YOU WANT!.m4a'},
         {title: 'LA LA LA', artists: ['EPITXME', 'xaduma'], audio: 'albums/EPITXME/UNAVOIDABLE/audio/EPITXME, xaduma - LA LA LA.m4a'},
-        {title: 'TO THA BEAT!', artists: ['EPITXME', 'xaduma'], audio: ''},
-        {title: 'WELCOME TO THE CLUB!', artists: ['EPITXME'], audio: ''},
-        {title: 'EMO GIRL!', artists: ['EPITXME'], audio: ''},
-        {title: 'SIPPIN ON WHITHEY!', artists: ['EPITXME', 'dollreal'], audio: ''},
-        {title: 'TONIGHT IM 21', artists: ['EPITXME', '666tsukasa'], audio: ''},
-        {title: 'LEAVE ME ALONE!', artists: ['EPITXME'], audio: ''},
+        {title: 'TO THA BEAT!', artists: ['EPITXME', 'xaduma'], audio: 'albums/EPITXME/UNAVOIDABLE/audio/EPITXME, xaduma - TO THA BEAT! (Remix).m4a'},
+        {title: 'WELCOME TO THE CLUB!', artists: ['EPITXME'], audio: 'albums/EPITXME/UNAVOIDABLE/audio/EPITXME - WELCOME TO THE CLUB!.m4a'},
+        {title: 'EMO GIRL!', artists: ['EPITXME'], audio: 'albums/EPITXME/UNAVOIDABLE/audio/EPITXME - EMO GIRL!.m4a'},
+        {title: 'SIPPIN ON WHITHEY!', artists: ['EPITXME', 'dollreal'], audio: 'albums/EPITXME/UNAVOIDABLE/audio/EPITXME, dollreal - SIPPIN ON WHITNEY!.m4a'},
+        {title: 'TONIGHT I’M 21', artists: ['EPITXME', '666tsukasa'], audio: 'albums/EPITXME/UNAVOIDABLE/audio/EPITXME, 666tsukasa - TONIGHT I’M 21.mp3'},
+        {title: 'LEAVE ME ALONE!', artists: ['EPITXME'], audio: 'albums/EPITXME/UNAVOIDABLE/audio/EPITXME - LEAVE ME ALONE!.mp3'},
         ]
     },
     {
@@ -2063,6 +2096,7 @@ function updateSong(track, customCover = null) {
     if (!track) return;
     
     songCover.src = customCover || track.cover;
+    openCoverImg.src = songCover.src
     songTitle.textContent = track.title;
     if (miniCover) miniCover.src = customCover || track.cover;
     if (miniTitle) miniTitle.textContent = track.title;
@@ -2543,6 +2577,24 @@ card.forEach(item => {
 closeArtistProfile.addEventListener('click', ()=> {
     artistProfile.style.display = 'none'
 })
+
+// УВЕЛИЧЕНИЕ ОБЛОЖКИ ТРЕКА И ФОТО ИСПОЛНИТЕЛЯ ПРИ НАЖАТИИ НА НИХ
+const openCover = document.querySelector('.open-cover')
+const closeOpenCover = document.querySelector('.close-open-cover')
+const openCoverBack = document.querySelector('.open-cover-back')
+
+function openSongCover() {
+    openCover.style.display = 'block'
+    openCoverBack.style.display = 'block'
+}
+
+function closeSongCover() {
+    openCover.style.display = 'none'
+    openCoverBack.style.display = 'none'
+}
+
+songCover.addEventListener('click', () => {openSongCover()})
+closeOpenCover.addEventListener('click', () => {closeSongCover()})
 
 
 // СИНГЛЫ В ПРОФИЛЕ ИСПОЛНИТЕЛЯ
@@ -3222,30 +3274,29 @@ prevSong_button.addEventListener('click', prevSong)
 
 // ПЕРЕКЛЮЧЕНИЕ МЕЖДУ БЛОКАМИ
 const buttons = document.querySelectorAll('.panel_btn')
-const blocks = document.querySelectorAll('.block')
-const playlist = document.querySelector('.playlist')
+const panes = document.querySelectorAll('.pane')
 
-for (let i = 0; i < blocks.length; i++) {
-    buttons[i].addEventListener('click', ()=> {
-    blocks.forEach(block => {
-    block.style.display = 'none'
-    artist_click.classList.remove('active')
-    blocks[i].style.display = 'block'
-    artistProfile.style.display = 'none'
-    alb.style.display = 'none'
-    sloy.style.display = 'none'
-    document.querySelector('.all-single').style.display = 'none'
-    document.querySelector('.all-album').style.display = 'none'
-    })
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        buttons.forEach(button => button.classList.remove('active'))
+        panes.forEach(pane => pane.classList.remove('active'))
 
-    // Логика отображения мини-плеера: скрываем на 1-й вкладке (Большой плеер, i === 0)
-    if (i === 0) {
-        miniPlayer.style.display = 'none';
-    } else {
-        if (audio.src) miniPlayer.style.display = 'block';
-    }
+        button.classList.add('active')
+
+        const targetId = button.getAttribute('data-tab')
+        const targetPane = document.getElementById(targetId)
+
+        if (targetPane) {
+            targetPane.classList.add('active')
+
+            if (targetId != 'audioplayer') {
+                miniPlayer.style.display = 'block'
+            } else {
+                miniPlayer.style.display = 'none'
+            }
+        }
     })
-}
+})
 
 
 // ОБРАБОТЧИК КНОПКИ MIX
@@ -3418,7 +3469,6 @@ repeatSong_button.addEventListener('click', () => {
         }
     });
 });
-
 
 
 
