@@ -11,6 +11,7 @@ const volume_play_button = document.querySelector('.volume_play_button')
 const songCover = document.querySelector('.song_img')
 const songTitle = document.querySelector('.song_info__title')
 const songArtists = document.querySelector('.list_of_artists')
+const openCoverImg = document.querySelector('.open-cover-img')
 
 
 // ПРОГРЕСС
@@ -50,7 +51,7 @@ const photos_artists = [
     },
     {
         text: 'xaduma',
-        photo: 'artists/xaduma.jpg',
+        photo: 'artists/xaduma.png',
     },
     {
         text: 'EPITXME',
@@ -189,10 +190,6 @@ const photos_artists = [
         photo: 'artists/xxxmanera.jpeg',
     },
     {
-        text: 'мистер модератор',
-        photo: 'artists/мистер модератор.jpg',
-    },
-    {
         text: 'SODA LUV',
         photo: 'artists/SODA LUV.jpg',
     },
@@ -248,6 +245,171 @@ const photos_artists = [
 
 // СПИСОК ПЕСЕН
 const songs = [
+    {
+        cover: 'images/asteria - SEXY GIRL.png',
+        title: 'SEXY GIRL',
+        artist_1: 'asteria',
+        audio: 'audio/asteria - SEXY GIRL.m4a',
+    },
+    {
+        cover: 'images/d3r, kets4eki - NO FLIRTS.png',
+        title: 'NO FLIRTS',
+        artist_1: 'd3r',
+        artist_2: 'kets4eki',
+        audio: 'audio/d3r, kets4eki - NO FLIRTS.m4a',
+    },
+    {
+        cover: 'images/Clover! - GOIN DUMB!.jpg',
+        title: 'GOIN DUMB!',
+        artist_1: 'Clover!',
+        audio: 'audio/Clover! - GOIN DUMB!.m4a',
+    },
+    {
+        cover: 'images/asteria - BAD FOR YOU.png',
+        title: 'BAD FOR YOU',
+        artist_1: 'asteria',
+        audio: 'audio/asteria - BAD FOR YOU.mp3',
+    },
+    {
+        cover: 'images/xaduma, Vyzer - DOWN&DIRTY.png',
+        title: 'DOWN&DIRTY',
+        artist_1: 'xaduma',
+        artist_2: 'Vyzer',
+        audio: 'audio/xaduma, Vyzer - DOWN&DIRTY.mp3',
+    },
+    {
+        cover: 'images/444pluto, kets4eki, HAR$h - SIP THAT!.png',
+        title: 'SIP THAT!',
+        artist_1: '444pluto',
+        artist_2: 'kets4eki',
+        artist_3: 'HAR$h',
+        audio: 'audio/444pluto, kets4eki, HAR$h - SIP THAT!.mp3',
+    },
+    {
+        cover: 'images/Anarchist Sanctuary, asteria, kets4eki  - i don’t care.png',
+        title: 'i don’t care',
+        artist_1: 'Anarchist Sanctuary',
+        artist_2: 'asteria',
+        artist_3: 'kets4eki',
+        audio: 'albums/asteria/ASFRIDAYS/audio/Anarchist Sanctuary, asteria, kets4eki  - i don’t care.m4a',
+    },
+    {
+        cover: 'images/Anarchist Sanctuary, asteria, kets4eki  - serotonin.png',
+        title: 'serotonin',
+        artist_1: 'Anarchist Sanctuary',
+        artist_2: 'asteria',
+        artist_3: 'kets4eki',
+        audio: 'albums/asteria/ASFRIDAYS/audio/Anarchist Sanctuary, asteria, kets4eki  - serotonin.mp3',
+    },
+    {
+        cover: 'images/Anarchist Sanctuary, asteria, kets4eki  - no_more.png',
+        title: 'no_more',
+        artist_1: 'Anarchist Sanctuary',
+        artist_2: 'asteria',
+        artist_3: 'kets4eki',
+        audio: 'albums/asteria/ASFRIDAYS/audio/Anarchist Sanctuary, asteria, kets4eki  - no_more.mp3',
+    },
+    {
+        cover: 'images/Anarchist Sanctuary, asteria, kets4eki  - laughin to the bank.png',
+        title: 'laughin to the bank',
+        artist_1: 'Anarchist Sanctuary',
+        artist_2: 'asteria',
+        artist_3: 'kets4eki',
+        audio: 'albums/asteria/ASFRIDAYS/audio/Anarchist Sanctuary, asteria, kets4eki  - laughin to the bank.mp3',
+    },
+    {
+        cover: 'albums/clout/ОКО/clout - ОКО.webp',
+        title: 'Миром правит',
+        artist_1: 'clout',
+        audio: 'albums/clout/ОКО/audio/clout - Миром правит.m4a',
+    },
+    {
+        cover: 'albums/clout/ОКО/clout - ОКО.webp',
+        title: 'Ad4m',
+        artist_1: 'clout',
+        audio: 'albums/clout/ОКО/audio/clout - Ad4m.m4a',
+    },
+    {
+        cover: 'albums/clout/ОКО/clout - ОКО.webp',
+        title: 'BoneSSS',
+        artist_1: 'clout',
+        audio: 'albums/clout/ОКО/audio/clout - BoneSSS.m4a',
+    },
+    {
+        cover: 'albums/clout/ОКО/clout - ОКО.webp',
+        title: 'Чудо Света',
+        artist_1: 'clout',
+        audio: 'albums/clout/ОКО/audio/clout - Чудо Света.m4a',
+    },
+    {
+        cover: 'images/sykcore, EPITXME - AINT SLOWING DOWN!.jpeg',
+        title: 'AINT SLOWING DOWN!',
+        artist_1: 'sykcore',
+        artist_2: 'EPITXME',
+        audio: 'audio/sykcore, EPITXME - AINT SLOWING DOWN!',
+    },
+    {
+        cover: 'images/asteria, an4rch - why can’t i be happy.png',
+        title: 'why can’t i be happy',
+        artist_1: 'asteria',
+        artist_2: 'an4rch',
+        audio: 'audio/asteria x an4rch - why can’t i be happy.m4a',
+    },
+    {
+        cover: 'albums/dmtboy/DMTCORE/dmtboy - DMTCORE.png',
+        title: 'ГИГАБАЙТЫ',
+        artist_1: 'dmtboy',
+        audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - ГИГАБАЙТЫ.m4a',
+    },
+    {
+        cover: 'albums/dmtboy/DMTCORE/dmtboy - DMTCORE.png',
+        title: 'СЛОВИЛ ЗВЕЗДУ',
+        artist_1: 'dmtboy',
+        audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - СЛОВИЛ ЗВЕЗДУ.m4a',
+    },
+    {
+        cover: 'albums/dmtboy/DMTCORE/dmtboy - DMTCORE.png',
+        title: 'ANFISA',
+        artist_1: 'dmtboy',
+        audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - ANFISA.mp3',
+    },
+    {
+        cover: 'albums/dmtboy/DMTCORE/dmtboy - DMTCORE.png',
+        title: 'ЭТУ И ТУ',
+        artist_1: 'dmtboy',
+        audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - ЭТУ И ТУ.m4a',
+    },
+    {
+        cover: 'albums/dmtboy/DMTCORE/dmtboy - DMTCORE.png',
+        title: 'ПЕРЕЗАРЯДКА 3',
+        artist_1: 'dmtboy',
+        audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - ПЕРЕЗАРЯДКА 3.m4a',
+    },
+    {
+        cover: 'albums/dmtboy/DMTCORE/dmtboy - DMTCORE.png',
+        title: 'FAKWRK',
+        artist_1: 'dmtboy',
+        audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - FAKWRK.m4a',
+    },
+    {
+        cover: 'images/Clover!, Vyzer - BAD HABIT!.jpeg',
+        title: 'BAD HABIT!',
+        artist_1: 'Vyzer',
+        artist_2: 'Clover!',
+        audio: 'audio/Clover!, Vyzer - BAD HABIT!.m4a',
+    },
+    {
+        cover: 'images/Vyzer - I GOT AN EMO CHICK WITH BALLS XD.jpg',
+        title: 'I GOT AN EMO CHICK WITH BALLS XD',
+        artist_1: 'Vyzer',
+        audio: 'audio/Vyzer - I GOT AN EMO CHICK WITH BALLS XD.m4a',
+    },
+    {
+        cover: 'images/xaduma - GAH DAMN.jpg',
+        title: 'GAH DAMN',
+        artist_1: 'xaduma',
+        audio: 'audio/xaduma - GAH DAMN.m4a',
+    },
     {
         cover: 'images/Anarchist Sanctuary, asteria, kets4eki - way it goes.png',
         title: 'way it goes',
@@ -319,13 +481,6 @@ const songs = [
         audio: 'audio/CR0T0N, 444pluto, prvttyscrzz, 5GSWAG - HAD ENOUGH!.mp3',
     },
     {
-        cover: 'images/CR0T0N, 444pluto - Always On My Mind.png',
-        title: 'Always On My Mind',
-        artist_1: 'CR0T0N',
-        artist_2: '444pluto',
-        audio: 'albums/CR0T0N/The Red Carpet/audio/СR0T0N, 444pluto - Always On My Mind.m4a',
-    },
-    {
         cover: 'images/CR0T0N, euphoria - NO YOU DONT!.png',
         title: 'NO YOU DONT!',
         artist_1: 'CR0T0N',
@@ -378,6 +533,12 @@ const songs = [
         title: 'make you sweat',
         artist_1: 'asteria',
         audio: 'albums/asteria/niche princess/audio/asteria - make you sweat.m4a',
+    },
+    {
+        cover: 'albums/asteria/SCARLET ASHES/asteria - SCARLET ASHES.png',
+        title: 'that’s okay...',
+        artist_1: 'asteria',
+        audio: 'albums/asteria/SCARLET ASHES/audio/asteria - that`s okay....m4a',
     },
     {
         cover: 'images/Anarchist Sanctuary, asteria, kets4eki  - RIGHT NOW.jpg',
@@ -460,6 +621,31 @@ const songs = [
         title: 'TOLD HER NAH!',
         artist_1: 'EPITXME',
         audio: 'albums/EPITXME/SELFISH/audio/EPITXME - TOLD HER NAH!.m4a'
+    },
+    {
+        cover: 'images/EPITXME - TOLD HER NAH!.jpeg',
+        title: 'CHANCE!',
+        artist_1: 'EPITXME',
+        audio: 'albums/EPITXME/SELFISH/audio/EPITXME - CHANCE!.m4a'
+    },
+    {
+        cover: 'images/EPITXME - TOLD HER NAH!.jpeg',
+        title: 'CAN’T GET ENOUGH!',
+        artist_1: 'EPITXME',
+        audio: 'albums/EPITXME/SELFISH/audio/EPITXME - CAN’T GET ENOUGH!.m4a'
+    },
+    {
+        cover: 'images/EPITXME - TOLD HER NAH!.jpeg',
+        title: 'NAH!',
+        artist_1: 'EPITXME',
+        audio: 'albums/EPITXME/SELFISH/audio/EPITXME - NAH!.m4a'
+    },
+    {
+        cover: 'images/EPITXME - TOLD HER NAH!.jpeg',
+        title: 'ON MY OWN!',
+        artist_1: 'EPITXME',
+        artist_2: '4ortake',
+        audio: 'albums/EPITXME/SELFISH/audio/EPITXME, 4ortake - ON MY OWN!.m4a'
     },
     {
         cover: 'images/Vee4r, EPITXME - NO CHANCE!.jpg',
@@ -632,14 +818,6 @@ const songs = [
         audio: 'albums/asteria/ASFRIDAYS/audio/Anarchist Sanctuary, asteria, kets4eki - drugs callin.m4a'
     },
     {
-        cover: 'images/Anarchist Sanctuary, asteria, kets4eki - cocaine bricks.png',
-        title: 'cocaine bricks',
-        artist_1: 'Anarchist Sanctuary',
-        artist_2: 'asteria',
-        artist_3: 'kets4eki',
-        audio: 'albums/asteria/ASFRIDAYS/audio/Anarchist Sanctuary, asteria, kets4eki - cocaine bricks.m4a'
-    },
-    {
         cover: 'images/Anarchist Sanctuary, asteria, kets4eki - cuz i wanna.jpeg',
         title: 'cuz i wanna',
         artist_1: 'Anarchist Sanctuary',
@@ -729,17 +907,10 @@ const songs = [
         audio: 'audio/skypebf, kets4eki, Syris - talk shit.m4a'
     },
     {
-        cover: 'images/мистер модератор, SODA LUV - занозы.jpeg',
-        title: "занозы",
-        artist_1: 'мистер модератор',
-        artist_2: 'SODA LUV',
-        audio: 'audio/мистер модератор, SODA LUV - занозы.m4a'
-    },
-    {
         cover: 'images/dmtboy - GET KRANK.jpg',
         title: 'GET KRANK',
         artist_1: 'dmtboy',
-        audio: 'audio/dmtboy - GET KRANK.m4a'
+        audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - GET KRANK.m4a'
     },
     {
         cover: 'images/dmtboy - OMGDBL.jpeg',
@@ -1124,6 +1295,13 @@ const songs = [
         artist_2: 'xaduma',
         audio: 'albums/EPITXME/UNAVOIDABLE/audio/EPITXME, xaduma - LA LA LA.m4a'
     },
+    {
+        cover: 'images/EPITXME, xaduma - LA LA LA.png',
+        title: 'TO THA BEAT! (Remix)',
+        artist_1: 'EPITXME',
+        artist_2: 'xaduma',
+        audio: 'albums/EPITXME/UNAVOIDABLE/audio/EPITXME, xaduma - TO THA BEAT! (Remix).m4a'
+    },
 ]
 
 // СПИСОК АЛЬБОМОВ
@@ -1134,6 +1312,11 @@ const albums = [
         title: 'ASFRIDAYS',
         cover: 'albums/asteria/ASFRIDAYS/asteria, kets4eki - ASFRIDAYS.jpeg',
         songs: [
+        {title: 'i don’t care', artists: ['Anarchist Sanctuary', 'asteria', 'kets4eki'], audio: 'albums/asteria/ASFRIDAYS/audio/Anarchist Sanctuary, asteria, kets4eki  - i don’t care.m4a'},
+        {title: 'serotonin', artists: ['Anarchist Sanctuary', 'asteria', 'kets4eki'], audio: 'albums/asteria/ASFRIDAYS/audio/Anarchist Sanctuary, asteria, kets4eki  - serotonin.mp3'},
+        {title: 'no_more', artists: ['Anarchist Sanctuary', 'asteria', 'kets4eki'], audio: 'albums/asteria/ASFRIDAYS/audio/Anarchist Sanctuary, asteria, kets4eki  - no_more.mp3'},
+        {title: 'laughin to the bank', artists: ['Anarchist Sanctuary', 'asteria', 'kets4eki'], audio: 'albums/asteria/ASFRIDAYS/audio/Anarchist Sanctuary, asteria, kets4eki  - laughin to the bank.mp3'},
+        {title: 'different day, same drugs', artists: ['Anarchist Sanctuary', 'asteria', 'kets4eki'], audio: 'albums/asteria/ASFRIDAYS/audio/Anarchist Sanctuary, asteria, kets4eki - different day, same drugs.mp3'},
         {title: 'way it goes', artists: ['Anarchist Sanctuary', 'asteria', 'kets4eki'], audio: 'albums/asteria/ASFRIDAYS/audio/Anarchist Sanctuary, asteria, kets4eki - way it goes.m4a'},
         {title: 'sorry not sorry', artists: ['Anarchist Sanctuary', 'asteria', 'kets4eki'], audio: 'albums/asteria/ASFRIDAYS/audio/Anarchist Sanctuary, asteria, kets4eki - sorry not sorry.m4a'},
         {title: 'RIGHT NOW', artists: ['Anarchist Sanctuary', 'asteria', 'kets4eki'], audio: 'albums/asteria/ASFRIDAYS/audio/Anarchist Sanctuary, asteria, kets4eki  - RIGHT NOW.m4a'},
@@ -1205,9 +1388,9 @@ const albums = [
         title: 'SCARLET ASHES',
         cover: 'albums/asteria/SCARLET ASHES/asteria - SCARLET ASHES.png',
         songs: [
-        {title: 'that’s okay...', artists: ['asteria'], audio: ''},
-        {title: 'i hate your friends', artists: ['asteria'], audio: ''},
-        {title: 'lie about this', artists: ['asteria'], audio: ''},
+        {title: 'that’s okay...', artists: ['asteria'], audio: 'albums/asteria/SCARLET ASHES/audio/asteria - that`s okay....m4a'},
+        {title: 'i hate your friends', artists: ['asteria'], audio: 'albums/asteria/SCARLET ASHES/audio/asteria - i hate your friends.m4a'},
+        {title: 'lie about this', artists: ['asteria'], audio: 'albums/asteria/SCARLET ASHES/audio/asteria - lie about this.m4a'},
         ]
     },
     {
@@ -1257,27 +1440,27 @@ const albums = [
         title: 'Cute Songs For Gangsters',
         cover: 'albums/asteria/Cute Songs For Gangsters/asteria, 6arelyhuman - Cute Songs For Gangsters.png',
         songs: [
-        {title: 'BLOODBATH', artists: ['6arelyhuman', 'asteria'], audio: ''},
-        {title: 'HYPNOTIZED', artists: ['6arelyhuman', 'asteria'], audio: ''},
-        {title: 'RED MERCEDES', artists: ['6arelyhuman', 'asteria'], audio: ''},
-        {title: 'FADE AWAY', artists: ['6arelyhuman', 'asteria'], audio: ''},
-        {title: 'Make Me Famous', artists: ['6arelyhuman', 'asteria'], audio: ''},
+        {title: 'BLOODBATH', artists: ['6arelyhuman', 'asteria'], audio: 'albums/asteria/Cute Songs For Gangsters/audio/6arelyhuman, asteria - BLOODBATH.m4a'},
+        {title: 'HYPNOTIZED', artists: ['6arelyhuman', 'asteria'], audio: 'albums/asteria/Cute Songs For Gangsters/audio/6arelyhuman, asteria - HYPNOTIZED.m4a'},
+        {title: 'RED MERCEDES', artists: ['6arelyhuman', 'asteria'], audio: 'albums/asteria/Cute Songs For Gangsters/audio/6arelyhuman, asteria - RED MERCEDES.m4a'},
+        {title: 'FADE AWAY', artists: ['6arelyhuman', 'asteria'], audio: 'albums/asteria/Cute Songs For Gangsters/audio/6arelyhuman, asteria - FADE AWAY.m4a'},
+        {title: 'Make Me Famous', artists: ['6arelyhuman', 'asteria'], audio: 'albums/asteria/Cute Songs For Gangsters/audio/6arelyhuman, asteria - Make Me Famous.m4a'},
         ]
     },
     {
         // asteria, kets4eki
-        artists: ['asteria', 'kets4eki'], 
+        artists: ['kets4eki','asteria'], 
         title: 'RAVE2DEATH',
         cover: 'albums/asteria/RAVE2DEATH/asteria, kets4eki - RAVE2DEATH.jpg',
         songs: [
-        {title: '#RAVELIFE', artists: ['asteria', 'kets4eki'], audio: ''},
-        {title: 'FADED', artists: ['asteria', 'kets4eki'], audio: ''},
-        {title: 'DOLLAR BILLS', artists: ['asteria', 'kets4eki'], audio: ''},
-        {title: 'TRYNA FUCK (SPARTA)', artists: ['asteria', 'kets4eki'], audio: ''},
-        {title: 'COME ON', artists: ['asteria', 'kets4eki'], audio: ''},
-        {title: 'i fucked her friend', artists: ['asteria', 'kets4eki'], audio: ''},
-        {title: 'felling nothing', artists: ['asteria', 'kets4eki', '6arelyhuman'], audio: ''},
-        {title: 'COUNT IT UP', artists: ['asteria', 'kets4eki', 'hubithekid'], audio: ''},
+        {title: '#RAVELIFE', artists: ['kets4eki','asteria'], audio: 'albums/asteria/RAVE2DEATH/audio/kets4eki, asteria - RAVELIFE.mp3'},
+        {title: 'FADED', artists: ['kets4eki','asteria'], audio: 'albums/asteria/RAVE2DEATH/audio/kets4eki, asteria - FADED.mp3'},
+        {title: 'DOLLAR BILLS', artists: ['kets4eki','asteria'], audio: 'albums/asteria/RAVE2DEATH/audio/kets4eki, asteria - DOLLAR BILLS.mp3'},
+        {title: 'TRYNA FUCK (SPARTA)', artists: ['kets4eki','asteria'], audio: 'albums/asteria/RAVE2DEATH/audio/kets4eki, asteria - TRYNA FUCK (SPARTA).mp3'},
+        {title: 'COME ON', artists: ['kets4eki','asteria'], audio: 'albums/asteria/RAVE2DEATH/audio/kets4eki, asteria - COME ON.mp3'},
+        {title: 'i fucked her friend', artists: ['kets4eki','asteria'], audio: 'albums/asteria/RAVE2DEATH/audio/kets4eki, asteria - i fucked her friend.mp3'},
+        {title: 'felling nothing', artists: ['kets4eki', 'asteria', '6arelyhuman'], audio: 'albums/asteria/RAVE2DEATH/audio/kets4eki, asteria, 6arelyhuman - feeling nothing.mp3'},
+        {title: 'COUNT IT UP', artists: ['kets4eki', 'asteria', 'hubithekid'], audio: 'albums/asteria/RAVE2DEATH/audio/kets4eki, asteria, hubithekid - COUNT IT UP.mp3'},
         ]
     },
     {
@@ -1354,14 +1537,14 @@ const albums = [
         title: 'SELFISH',
         cover: 'albums/EPITXME/SELFISH/EPITXME - SELFISH.png',
         songs: [
-        {title: 'SELFISH!', artists: ['EPITXME'], audio: ''},
-        {title: 'WHERE WERE YOU?', artists: ['EPITXME'], audio: ''},
-        {title: 'CANT GET ENOUGH!', artists: ['EPITXME'], audio: ''},
-        {title: 'CHANCE!', artists: ['EPITXME'], audio: ''},
-        {title: 'ON MY OWN!', artists: ['EPITXME', '4ortake'], audio: ''},
+        {title: 'SELFISH!', artists: ['EPITXME'], audio: 'albums/EPITXME/SELFISH/audio/EPITXME - SELFISH!.m4a'},
+        {title: 'WHERE WERE YOU?', artists: ['EPITXME'], audio: 'albums/EPITXME/SELFISH/audio/EPITXME - WHERE WERE YOU.m4a'},
+        {title: 'CAN’T GET ENOUGH!', artists: ['EPITXME'], audio: 'albums/EPITXME/SELFISH/audio/EPITXME - CAN’T GET ENOUGH!.m4a'},
+        {title: 'CHANCE!', artists: ['EPITXME'], audio: 'albums/EPITXME/SELFISH/audio/EPITXME - CHANCE!.m4a'},
+        {title: 'ON MY OWN!', artists: ['EPITXME', '4ortake'], audio: 'albums/EPITXME/SELFISH/audio/EPITXME, 4ortake - ON MY OWN!.m4a'},
         {title: 'TOLD HER NAH!', artists: ['EPITXME'], audio: 'albums/EPITXME/SELFISH/audio/EPITXME - TOLD HER NAH!.m4a'},
-        {title: 'I DONT BELIEVE!', artists: ['EPITXME'], audio: ''},
-        {title: 'NAH!', artists: ['EPITXME'], audio: ''},
+        {title: 'I DON’T BELIEVE!', artists: ['EPITXME'], audio: 'albums/EPITXME/SELFISH/audio/EPITXME - I DON’T BELIEVE!.m4a'},
+        {title: 'NAH!', artists: ['EPITXME'], audio: 'albums/EPITXME/SELFISH/audio/EPITXME - NAH!.m4a'},
         ]
     },
     {
@@ -1369,16 +1552,16 @@ const albums = [
         title: 'UNAVOIDABLE',
         cover: 'albums/EPITXME/UNAVOIDABLE/EPITXME - UNAVOIDABLE.png',
         songs: [
-        {title: 'DISCUSSION (Skit)', artists: ['EPITXME', 'sxcredmane'], audio: ''},
-        {title: '#ELECTRONICSWAG!', artists: ['EPITXME', 'sxcredmane'], audio: ''},
+        {title: 'DISCUSSION (Skit)', artists: ['EPITXME', 'sxcredmane'], audio: 'albums/EPITXME/UNAVOIDABLE/audio/EPITXME, sxcredmane - DISCUSSION (Skit).m4a'},
+        {title: '#ELECTRONICSWAG!', artists: ['EPITXME', 'sxcredmane'], audio: 'albums/EPITXME/UNAVOIDABLE/audio/EPITXME, sxcredmane - ELECTONICSWAG!.m4a'},
         {title: 'ANYTHING YOU WANT!', artists: ['EPITXME', 'sxcredmane'], audio: 'albums/EPITXME/UNAVOIDABLE/audio/EPITXME, sxcredmane - ANYTHING YOU WANT!.m4a'},
         {title: 'LA LA LA', artists: ['EPITXME', 'xaduma'], audio: 'albums/EPITXME/UNAVOIDABLE/audio/EPITXME, xaduma - LA LA LA.m4a'},
-        {title: 'TO THA BEAT!', artists: ['EPITXME', 'xaduma'], audio: ''},
-        {title: 'WELCOME TO THE CLUB!', artists: ['EPITXME'], audio: ''},
-        {title: 'EMO GIRL!', artists: ['EPITXME'], audio: ''},
-        {title: 'SIPPIN ON WHITHEY!', artists: ['EPITXME', 'dollreal'], audio: ''},
-        {title: 'TONIGHT IM 21', artists: ['EPITXME', '666tsukasa'], audio: ''},
-        {title: 'LEAVE ME ALONE!', artists: ['EPITXME'], audio: ''},
+        {title: 'TO THA BEAT!', artists: ['EPITXME', 'xaduma'], audio: 'albums/EPITXME/UNAVOIDABLE/audio/EPITXME, xaduma - TO THA BEAT! (Remix).m4a'},
+        {title: 'WELCOME TO THE CLUB!', artists: ['EPITXME'], audio: 'albums/EPITXME/UNAVOIDABLE/audio/EPITXME - WELCOME TO THE CLUB!.m4a'},
+        {title: 'EMO GIRL!', artists: ['EPITXME'], audio: 'albums/EPITXME/UNAVOIDABLE/audio/EPITXME - EMO GIRL!.m4a'},
+        {title: 'SIPPIN ON WHITHEY!', artists: ['EPITXME', 'dollreal'], audio: 'albums/EPITXME/UNAVOIDABLE/audio/EPITXME, dollreal - SIPPIN ON WHITNEY!.m4a'},
+        {title: 'TONIGHT I’M 21', artists: ['EPITXME', '666tsukasa'], audio: 'albums/EPITXME/UNAVOIDABLE/audio/EPITXME, 666tsukasa - TONIGHT I’M 21.mp3'},
+        {title: 'LEAVE ME ALONE!', artists: ['EPITXME'], audio: 'albums/EPITXME/UNAVOIDABLE/audio/EPITXME - LEAVE ME ALONE!.mp3'},
         ]
     },
     {
@@ -1434,6 +1617,39 @@ const albums = [
     {
         // dmtboy
         artists: ['dmtboy'], 
+        title: 'DMTCORE',
+        cover: 'albums/dmtboy/DMTCORE/dmtboy - DMTCORE.png',
+        songs: [
+        {title: 'GET KRANK', artists: ['dmtboy'], audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - GET KRANK.m4a'},
+        {title: 'SUPA STA', artists: ['dmtboy'], audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - SUPA STA.m4a'},
+        {title: 'ЭТУ И ТУ', artists: ['dmtboy'], audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - ЭТУ И ТУ.m4a'},
+        {title: 'KONTAKT', artists: ['dmtboy'], audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - KONTAKT.m4a'},
+        {title: 'ГИГАБАЙТЫ', artists: ['dmtboy'], audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - ГИГАБАЙТЫ.m4a'},
+        {title: 'AMBASSADOR', artists: ['dmtboy'], audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - AMBASSADOR.m4a'},
+        {title: 'SKINNY', artists: ['dmtboy'], audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - SKINNY.m4a'},
+        {title: '3GP', artists: ['dmtboy'], audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - 3GP.m4a'},
+        {title: 'СЛОВИЛ ЗВЕЗДУ', artists: ['dmtboy'], audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - СЛОВИЛ ЗВЕЗДУ.m4a'},
+        {title: 'В СПАМ', artists: ['dmtboy'], audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - В СПАМ.m4a'},
+        {title: 'ИНЕТ', artists: ['dmtboy'], audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - ИНЕТ.m4a'},
+        {title: 'ВЫХОД', artists: ['dmtboy'], audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - ВЫХОД.m4a'},
+        {title: 'SELEBA', artists: ['dmtboy'], audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - SELEBA.m4a'},
+        {title: 'ANFISA', artists: ['dmtboy'], audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - ANFISA.mp3'},
+        {title: 'BIG FAIL', artists: ['dmtboy'], audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - BIG FAIL.m4a'},
+        {title: 'MDK', artists: ['dmtboy'], audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - MDK.m4a'},
+        {title: 'ПЕРЕЗАРЯДКА 3', artists: ['dmtboy'], audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - ПЕРЕЗАРЯДКА 3.m4a'},
+        {title: '100500', artists: ['dmtboy'], audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - 100500.m4a'},
+        {title: 'ГУДКИ', artists: ['dmtboy'], audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - ГУДКИ.m4a'},
+        {title: 'ВСЁ КЛЁВА', artists: ['dmtboy'], audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - ВСЁ КЛЁВА.mp3'},
+        {title: 'КОММЕНТ', artists: ['dmtboy'], audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - КОММЕНТ.m4a'},
+        {title: 'НОВЫЕ', artists: ['dmtboy', 'diklor'], audio: 'albums/dmtboy/DMTCORE/audio/dmtboy, diklor - НОВЫЕ.m4a'},
+        {title: 'FAKWRK', artists: ['dmtboy'], audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - FAKWRK.m4a'},
+        {title: 'ХЛОПАЙ', artists: ['dmtboy'], audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - ХЛОПАЙ.m4a'},
+        {title: 'RIGNTON', artists: ['dmtboy'], audio: 'albums/dmtboy/DMTCORE/audio/dmtboy - RINGTON.mp3'},
+        ]
+    },
+    {
+        // dmtboy
+        artists: ['dmtboy'], 
         title: 'SUCK IT!',
         cover: 'albums/dmtboy/SUCK IT!/dmtboy - SUCK IT!.jpeg',
         songs: [
@@ -1454,6 +1670,17 @@ const albums = [
     },
     {
         // clout
+        artists: ['clout'], 
+        title: 'ОКО',
+        cover: 'albums/clout/ОКО/clout - ОКО.webp',
+        songs: [
+        {title: 'Миром правит', artists: ['clout'], audio: 'albums/clout/ОКО/audio/clout - Миром правит.m4a'},
+        {title: 'Ad4m', artists: ['clout'], audio: 'albums/clout/ОКО/audio/clout - Ad4m.m4a'},
+        {title: 'BoneSSS', artists: ['clout'], audio: 'albums/clout/ОКО/audio/clout - BoneSSS.m4a'},
+        {title: 'Чудо Света', artists: ['clout'], audio: 'albums/clout/ОКО/audio/clout - Чудо Света.m4a'}
+        ]
+    },
+    {
         artists: ['clout'], 
         title: 'КИБЕРПСИХОЗ.ERROR',
         cover: 'albums/clout/КИБЕРПСИХОЗ.ERROR/clout - КИБЕРПСИХОЗ.ERROR.png',
@@ -1524,7 +1751,7 @@ const albums = [
         // wikuro, Vee4r
         artists: ['wikuro','Vee4r'], 
         title: 'KNIVES EP',
-        cover: 'albums/Vee4r/KNIVES EP/wikuro, Vee4r - KNIVES EP.jpg',
+        cover: 'albums/wikuro/KNIVES EP/wikuro, Vee4r - KNIVES EP.jpg',
         songs: [
         {title: 'WELCOME TO THE STABBING', artists: ['wikuro', 'Vee4r'], audio: ''},
         {title: 'KNIVES', artists: ['wikuro', 'Vee4r'], audio: 'albums/wikuro/KNIVES EP/audio/wikuro, Vee4r - KNIVES.mp3'},
@@ -1846,6 +2073,7 @@ function updateSong(track, customCover = null) {
     if (!track) return;
     
     songCover.src = customCover || track.cover;
+    openCoverImg.src = songCover.src
     songTitle.textContent = track.title;
     if (miniCover) miniCover.src = customCover || track.cover;
     if (miniTitle) miniTitle.textContent = track.title;
@@ -1885,8 +2113,8 @@ function updateSong(track, customCover = null) {
             }
             appendSingle();
             appendAlbum();
-            artist_click.style.display = 'none';
-            artistProfile.style.display = 'block';
+            artist_click.classList.remove('active');
+            artistProfile.classList.add('active');
         });
     
         const foundArtist = photos_artists.find(item => item.text === artistName);
@@ -2062,65 +2290,93 @@ playSong_button.addEventListener("click", function() {
 })
 
 
-// ЗВУК ПЕСНИ
+// ЗВУК ПЕСНИ (ОСНОВНОЙ ПЛЕЕР)
 const audioplayerPlayer = document.querySelector('.audioplayer__player')
 const changeVolumeBox = audioplayerPlayer.querySelector('.change-volume-box')
 const volumeControl = audioplayerPlayer.querySelector('.volume-control')
-changeVolumeBox.style.display = 'none'
-
-volume_play_button.addEventListener('mouseenter', ()=> {changeVolumeBox.style.display = 'flex'})
-
-volumeControl.addEventListener('mouseleave', ()=> changeVolumeBox.style.display = 'none')
-
 const changeVolume = audioplayerPlayer.querySelector('.change-volume')
 
-let currentVolume = changeVolume.value
-
-changeVolume.addEventListener('input', (event) => {
-    audio.volume = event.target.value
-    if(audio.volume == 0) {
-        volume_play_button.src = 'icons/mute-button.svg'
-    } else {
-        volume_play_button.src = 'icons/unmute-button.svg'
-    }
-})
-
+// ЗВУК ПЕСНИ (МИНИ-ПЛЕЕР)
 const changeVolumeBoxMini = miniPlayer.querySelector('.change-volume-box')
 const volumeControlMini = miniPlayer.querySelector('.volume-control')
-changeVolumeBoxMini.style.display = 'none'
+const changeVolumeMini = miniPlayer.querySelector('.change-volume') 
 
+// Показываем/скрываем при наведении в основном плеере
+volume_play_button.addEventListener('mouseenter', () => changeVolumeBox.classList.add('is-active'))
+volumeControl.addEventListener('mouseleave', () => changeVolumeBox.classList.remove('is-active'))
 
-// MUTE ЗВУК 
-volume_play_button.addEventListener('click', ()=> {
+// Показываем/скрываем при наведении в мини-плеере
+if (miniVolumeBtn && changeVolumeBoxMini && volumeControlMini) {
+  miniVolumeBtn.addEventListener('mouseenter', () =>  changeVolumeBoxMini.classList.add('is-active'))
+  volumeControlMini.addEventListener('mouseleave', () => changeVolumeBoxMini.classList.remove('is-active'))
+}
+
+// Переменная для хранения громкости
+let currentVolume = changeVolume.value
+
+// Общая функция для обновления всех элементов интерфейса звука
+function updateVolumeInterface(volumeValue) {
+  audio.volume = volumeValue;
+  
+  // Синхронизируем положение обоих ползунков
+  changeVolume.value = volumeValue;
+  if (changeVolumeMini) changeVolumeMini.value = volumeValue;
+
+  // Находим иконку в зависимости от уровня звука
+  const iconSrc = volumeValue == 0 ? 'icons/mute-button.svg' : 'icons/unmute-button.svg';
+
+  // Меняем иконки на кнопках напрямую
+  if (volume_play_button) volume_play_button.src = iconSrc;
+  if (miniVolumeBtn) miniVolumeBtn.src = iconSrc;
+}
+
+// Слушатель для основного ползунка
+changeVolume.addEventListener('input', (event) => {
+  const value = event.target.value;
+  updateVolumeInterface(value);
+  if (value > 0) currentVolume = value; 
+})
+
+// Слушатель для ползунка в мини-плеере
+if (changeVolumeMini) {
+  changeVolumeMini.addEventListener('input', (event) => {
+    const value = event.target.value;
+    updateVolumeInterface(value);
+    if (value > 0) currentVolume = value;
+  })
+}
+
+// КЛИК ПО КНОПКЕ MUTE (ГЛАВНАЯ И В МИНИ-ПЛЕЕРЕ)
+function toggleMute(event) {
+  // Останавливаем всплытие события, чтобы mouseleave/click других элементов не мешали
+  event.stopPropagation(); 
+  
+  if (audio.volume > 0) {
+    currentVolume = audio.volume; // Запоминаем текущий звук
+    updateVolumeInterface(0);     // Полностью обнуляем звук и ползунки
+  } else {
+    const returnVolume = currentVolume > 0 ? currentVolume : 1;
+    updateVolumeInterface(returnVolume); // Восстанавливаем сохраненный уровень
+  }
+}
+
+// Универсальный обработчик клика для всего документа
+document.addEventListener('click', (event) => {
+  // Проверяем, нажали ли мы на кнопку громкости (в основном или мини-плеере)
+  const clickedButton = event.target.closest('.volume_play_button');
+  
+  if (clickedButton) {
+    event.stopPropagation(); // Блокируем баги всплытия событий
+    
     if (audio.volume > 0) {
-        currentVolume = audio.volume
-        audio.volume = 0;
-        changeVolume.value = 0
+      currentVolume = audio.volume;
+      updateVolumeInterface(0);
     } else {
-        const returnVolume = currentVolume > 0 ? currentVolume : 1;
-        audio.volume = returnVolume
-        changeVolume.value = returnVolume
+      const returnVolume = currentVolume > 0 ? currentVolume : 1;
+      updateVolumeInterface(returnVolume);
     }
-
-    // костыли...............
-    if (volume_play_button.src.includes('icons/unmute-button.svg')) {
-        miniVolumeBtn.src = 'icons/mute-button.svg'
-    } else {
-        miniVolumeBtn.src = 'icons/unmute-button.svg'
-    }
-})
-
-const volumeButton = document.querySelectorAll('.volume_play_button')
-
-volumeButton.forEach(item => {
-    item.addEventListener('click', ()=> {
-        if (item.src.includes('icons/unmute-button.svg')) {
-            item.src = 'icons/mute-button.svg'
-        } else {
-            item.src = 'icons/unmute-button.svg'
-        }
-    })
-})
+  }
+});
 
 
 // КНОПКИ ПАНЕЛИ
@@ -2262,11 +2518,11 @@ const artist_click = document.querySelector('.artist-click')
 const close_artist = document.querySelector('.close-artist')
 
 songArtists.addEventListener('click', ()=> {
-    artist_click.style.display = 'block'
+    artist_click.classList.add('active')
 })
 
 close_artist.addEventListener('click', ()=> {
-    artist_click.style.display = 'none'
+    artist_click.classList.remove('active')
 })
 
 
@@ -2287,7 +2543,7 @@ card.forEach(item => {
         if (checkList) {
             artistProfileImg.src = checkList.photo
             artistProfileName.textContent = checkList.text
-            artistProfile.style.display = 'block'
+            artistProfile.classList.add('active')
         }
 
         appendSingle();
@@ -2296,8 +2552,26 @@ card.forEach(item => {
 })
 
 closeArtistProfile.addEventListener('click', ()=> {
-    artistProfile.style.display = 'none'
+    artistProfile.classList.remove('active')
 })
+
+// УВЕЛИЧЕНИЕ ОБЛОЖКИ ТРЕКА И ФОТО ИСПОЛНИТЕЛЯ ПРИ НАЖАТИИ НА НИХ
+const openCover = document.querySelector('.open-cover')
+const closeOpenCover = document.querySelector('.close-open-cover')
+const openCoverBack = document.querySelector('.open-cover-back')
+
+function openSongCover() {
+    openCover.style.display = 'block'
+    openCoverBack.style.display = 'block'
+}
+
+function closeSongCover() {
+    openCover.style.display = 'none'
+    openCoverBack.style.display = 'none'
+}
+
+songCover.addEventListener('click', () => {openSongCover()})
+closeOpenCover.addEventListener('click', () => {closeSongCover()})
 
 
 // СИНГЛЫ В ПРОФИЛЕ ИСПОЛНИТЕЛЯ
@@ -2543,19 +2817,17 @@ function appendAllSingles() {
 
 
 // МЕНЮ ВСЕ СИНГЛЫ
-const checkSinglesButton = document.querySelector('.checkSingles')
-
 const allSinglesMenu = document.querySelector('.all-single')
+const seeSinglesButton = document.querySelector('.checkSingles')
+const singlesMenuClose = document.querySelector('.close-all-single')
 
-checkSinglesButton.addEventListener('click', ()=> {
-    allSinglesMenu.style.display = 'block'
+seeSinglesButton.addEventListener('click', ()=> {
+    allSinglesMenu.classList.add('active')
     appendAllSingles()
 })
 
-const singlesMenuClose = document.querySelector('.close-all-single')
-
 singlesMenuClose.addEventListener('click', ()=> {
-    allSinglesMenu.style.display = 'none'
+    allSinglesMenu.classList.remove('active')
 })
 
 
@@ -2564,8 +2836,8 @@ const alb = document.querySelector('.alb')
 const sloy = document.querySelector('.sloy')
 
 document.querySelector('.album-tracklist-close').addEventListener('click', ()=> {
-    alb.style.display = 'none'
-    sloy.style.display = 'none'
+    alb.classList.remove('active')
+    sloy.classList.remove('active')
 })
 
 
@@ -2678,8 +2950,8 @@ function appendAlbum() {
                 }) 
             }
             albumsOpenGrid.append(albumTrackFragment); 
-            sloy.style.display = 'block';
-            alb.style.display = 'block';
+            sloy.classList.add('active')
+            alb.classList.add('active')
             });
 
             addedCount++;
@@ -2862,8 +3134,8 @@ function appendAllAlbums() {
                 
                 albumsOpenGrid.append(albumTrackFragment); 
                 
-                if (sloy) { sloy.style.display = 'block'; sloy.style.zIndex = '2000'; }
-                if (alb) { alb.style.display = 'block'; alb.style.zIndex = '2001'; }
+                if (sloy) { sloy.classList.add('active'); sloy.style.zIndex = '2000'; }
+                if (alb) { alb.classList.add('active'); alb.style.zIndex = '2001'; }
             });
 
             // АЛЬБОМ В МЕНЮ ПРИ НАВЕДЕНИИ
@@ -2886,26 +3158,23 @@ function appendAllAlbums() {
 }
 
 document.querySelector('.album-tracklist-close').addEventListener('click', ()=> {
-    alb.style.display = 'none'
-    sloy.style.display = 'none'
-    // СБРОС СЛОЕВ
-    if (sloy) sloy.style.zIndex = '';
-    if (alb) alb.style.zIndex = '';
+    alb.classList.remove('active')
+    sloy.classList.remove('active')
 })
 
 
 // МЕНЮ С АЛЬБОМАМИ
 const allAlbumsMenu = document.querySelector('.all-album')
 const closeAllAlbumsMenu = document.querySelector('.close-all-album')
-const checkAlbums = document.querySelector('.checkAlbums')
+const seeAlbums = document.querySelector('.checkAlbums')
 
-checkAlbums.addEventListener('click', ()=> {
-    allAlbumsMenu.style.display = 'block'
+seeAlbums.addEventListener('click', ()=> {
+    allAlbumsMenu.classList.add('active')
     appendAllAlbums()
 })
 
 closeAllAlbumsMenu.addEventListener('click', ()=> {
-    allAlbumsMenu.style.display = 'none'
+    allAlbumsMenu.classList.remove('active')
 })
 
 
@@ -2977,30 +3246,36 @@ prevSong_button.addEventListener('click', prevSong)
 
 // ПЕРЕКЛЮЧЕНИЕ МЕЖДУ БЛОКАМИ
 const buttons = document.querySelectorAll('.panel_btn')
-const blocks = document.querySelectorAll('.block')
-const playlist = document.querySelector('.playlist')
+const panes = document.querySelectorAll('.pane')
+const newPanes = document.querySelectorAll('.new-pane')
 
-for (let i = 0; i < blocks.length; i++) {
-    buttons[i].addEventListener('click', ()=> {
-    blocks.forEach(block => {
-    block.style.display = 'none'
-    blocks[i].style.display = 'block'
-    artist_click.style.display = 'none'
-    artistProfile.style.display = 'none'
-    alb.style.display = 'none'
-    sloy.style.display = 'none'
-    document.querySelector('.all-single').style.display = 'none'
-    document.querySelector('.all-album').style.display = 'none'
-    })
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        buttons.forEach(button => button.classList.remove('active'))
+        panes.forEach(pane => pane.classList.remove('active'))
 
-    // Логика отображения мини-плеера: скрываем на 1-й вкладке (Большой плеер, i === 0)
-    if (i === 0) {
-        miniPlayer.style.display = 'none';
-    } else {
-        if (audio.src) miniPlayer.style.display = 'block';
-    }
+        artist_click.classList.remove('active')
+
+        newPanes.forEach(newPane => {
+            newPane.classList.remove('active')
+        })
+
+        button.classList.add('active')
+
+        const targetId = button.getAttribute('data-tab')
+        const targetPane = document.getElementById(targetId)
+
+        if (targetPane) {
+            targetPane.classList.add('active')
+
+            if (targetId != 'audioplayer') {
+                miniPlayer.style.display = 'block'
+            } else {
+                miniPlayer.style.display = 'none'
+            }
+        }
     })
-}
+})
 
 
 // ОБРАБОТЧИК КНОПКИ MIX
@@ -3173,8 +3448,6 @@ repeatSong_button.addEventListener('click', () => {
         }
     });
 });
-
-
 
 
 

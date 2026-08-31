@@ -286,6 +286,12 @@ const songs = [
         audio: 'audio/444pluto, kets4eki, HAR$h - SIP THAT!.mp3',
     },
     {
+        cover: 'images/d3r - red flag.jpg',
+        title: 'red flag',
+        artist_1: 'd3r',
+        audio: 'audio/d3r - red flag.m4a',
+    },
+    {
         cover: 'images/Anarchist Sanctuary, asteria, kets4eki  - i don’t care.png',
         title: 'i don’t care',
         artist_1: 'Anarchist Sanctuary',
@@ -481,13 +487,6 @@ const songs = [
         audio: 'audio/CR0T0N, 444pluto, prvttyscrzz, 5GSWAG - HAD ENOUGH!.mp3',
     },
     {
-        cover: 'images/CR0T0N, 444pluto - Always On My Mind.png',
-        title: 'Always On My Mind',
-        artist_1: 'CR0T0N',
-        artist_2: '444pluto',
-        audio: 'albums/CR0T0N/The Red Carpet/audio/СR0T0N, 444pluto - Always On My Mind.m4a',
-    },
-    {
         cover: 'images/CR0T0N, euphoria - NO YOU DONT!.png',
         title: 'NO YOU DONT!',
         artist_1: 'CR0T0N',
@@ -546,14 +545,6 @@ const songs = [
         title: 'that’s okay...',
         artist_1: 'asteria',
         audio: 'albums/asteria/SCARLET ASHES/audio/asteria - that`s okay....m4a',
-    },
-    {
-        cover: 'images/Anarchist Sanctuary, asteria, kets4eki - different day, same drugs.png',
-        title: 'different day, same drugs',
-        artist_1: 'Anarchist Sanctuary',
-        artist_2: 'asteria',
-        artist_3: 'kets4eki',
-        audio: 'albums/asteria/ASFRIDAYS/audio/Anarchist Sanctuary, asteria, kets4eki - different day, same drugs.mp3',
     },
     {
         cover: 'images/Anarchist Sanctuary, asteria, kets4eki  - RIGHT NOW.jpg',
@@ -831,14 +822,6 @@ const songs = [
         artist_2: 'asteria',
         artist_3: 'kets4eki',
         audio: 'albums/asteria/ASFRIDAYS/audio/Anarchist Sanctuary, asteria, kets4eki - drugs callin.m4a'
-    },
-    {
-        cover: 'images/Anarchist Sanctuary, asteria, kets4eki - cocaine bricks.png',
-        title: 'cocaine bricks',
-        artist_1: 'Anarchist Sanctuary',
-        artist_2: 'asteria',
-        artist_3: 'kets4eki',
-        audio: 'albums/asteria/ASFRIDAYS/audio/Anarchist Sanctuary, asteria, kets4eki - cocaine bricks.m4a'
     },
     {
         cover: 'images/Anarchist Sanctuary, asteria, kets4eki - cuz i wanna.jpeg',
@@ -2102,7 +2085,7 @@ function updateSong(track, customCover = null) {
     if (miniTitle) miniTitle.textContent = track.title;
     
     let artistsArray = [];
-    if (Array.isArray(track.artists)) { // Что это?
+    if (Array.isArray(track.artists)) {
         artistsArray = track.artists;
     } else {
         for (const key in track) {
@@ -2137,7 +2120,7 @@ function updateSong(track, customCover = null) {
             appendSingle();
             appendAlbum();
             artist_click.classList.remove('active');
-            artistProfile.style.display = 'block';
+            artistProfile.classList.add('active');
         });
     
         const foundArtist = photos_artists.find(item => item.text === artistName);
@@ -2566,7 +2549,7 @@ card.forEach(item => {
         if (checkList) {
             artistProfileImg.src = checkList.photo
             artistProfileName.textContent = checkList.text
-            artistProfile.style.display = 'block'
+            artistProfile.classList.add('active')
         }
 
         appendSingle();
@@ -2575,7 +2558,7 @@ card.forEach(item => {
 })
 
 closeArtistProfile.addEventListener('click', ()=> {
-    artistProfile.style.display = 'none'
+    artistProfile.classList.remove('active')
 })
 
 // УВЕЛИЧЕНИЕ ОБЛОЖКИ ТРЕКА И ФОТО ИСПОЛНИТЕЛЯ ПРИ НАЖАТИИ НА НИХ
@@ -2840,19 +2823,17 @@ function appendAllSingles() {
 
 
 // МЕНЮ ВСЕ СИНГЛЫ
-const checkSinglesButton = document.querySelector('.checkSingles')
-
 const allSinglesMenu = document.querySelector('.all-single')
+const seeSinglesButton = document.querySelector('.checkSingles')
+const singlesMenuClose = document.querySelector('.close-all-single')
 
-checkSinglesButton.addEventListener('click', ()=> {
-    allSinglesMenu.style.display = 'block'
+seeSinglesButton.addEventListener('click', ()=> {
+    allSinglesMenu.classList.add('active')
     appendAllSingles()
 })
 
-const singlesMenuClose = document.querySelector('.close-all-single')
-
 singlesMenuClose.addEventListener('click', ()=> {
-    allSinglesMenu.style.display = 'none'
+    allSinglesMenu.classList.remove('active')
 })
 
 
@@ -2861,8 +2842,8 @@ const alb = document.querySelector('.alb')
 const sloy = document.querySelector('.sloy')
 
 document.querySelector('.album-tracklist-close').addEventListener('click', ()=> {
-    alb.style.display = 'none'
-    sloy.style.display = 'none'
+    alb.classList.remove('active')
+    sloy.classList.remove('active')
 })
 
 
@@ -2975,8 +2956,8 @@ function appendAlbum() {
                 }) 
             }
             albumsOpenGrid.append(albumTrackFragment); 
-            sloy.style.display = 'block';
-            alb.style.display = 'block';
+            sloy.classList.add('active')
+            alb.classList.add('active')
             });
 
             addedCount++;
@@ -3159,8 +3140,8 @@ function appendAllAlbums() {
                 
                 albumsOpenGrid.append(albumTrackFragment); 
                 
-                if (sloy) { sloy.style.display = 'block'; sloy.style.zIndex = '2000'; }
-                if (alb) { alb.style.display = 'block'; alb.style.zIndex = '2001'; }
+                if (sloy) { sloy.classList.add('active'); sloy.style.zIndex = '2000'; }
+                if (alb) { alb.classList.add('active'); alb.style.zIndex = '2001'; }
             });
 
             // АЛЬБОМ В МЕНЮ ПРИ НАВЕДЕНИИ
@@ -3183,26 +3164,23 @@ function appendAllAlbums() {
 }
 
 document.querySelector('.album-tracklist-close').addEventListener('click', ()=> {
-    alb.style.display = 'none'
-    sloy.style.display = 'none'
-    // СБРОС СЛОЕВ
-    if (sloy) sloy.style.zIndex = '';
-    if (alb) alb.style.zIndex = '';
+    alb.classList.remove('active')
+    sloy.classList.remove('active')
 })
 
 
 // МЕНЮ С АЛЬБОМАМИ
 const allAlbumsMenu = document.querySelector('.all-album')
 const closeAllAlbumsMenu = document.querySelector('.close-all-album')
-const checkAlbums = document.querySelector('.checkAlbums')
+const seeAlbums = document.querySelector('.checkAlbums')
 
-checkAlbums.addEventListener('click', ()=> {
-    allAlbumsMenu.style.display = 'block'
+seeAlbums.addEventListener('click', ()=> {
+    allAlbumsMenu.classList.add('active')
     appendAllAlbums()
 })
 
 closeAllAlbumsMenu.addEventListener('click', ()=> {
-    allAlbumsMenu.style.display = 'none'
+    allAlbumsMenu.classList.remove('active')
 })
 
 
@@ -3275,11 +3253,18 @@ prevSong_button.addEventListener('click', prevSong)
 // ПЕРЕКЛЮЧЕНИЕ МЕЖДУ БЛОКАМИ
 const buttons = document.querySelectorAll('.panel_btn')
 const panes = document.querySelectorAll('.pane')
+const newPanes = document.querySelectorAll('.new-pane')
 
 buttons.forEach(button => {
     button.addEventListener('click', () => {
         buttons.forEach(button => button.classList.remove('active'))
         panes.forEach(pane => pane.classList.remove('active'))
+
+        artist_click.classList.remove('active')
+
+        newPanes.forEach(newPane => {
+            newPane.classList.remove('active')
+        })
 
         button.classList.add('active')
 

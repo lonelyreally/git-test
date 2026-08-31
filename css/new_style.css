@@ -32,6 +32,7 @@
     margin-top: 15px;
 }
 
+
 .panel-category {
     margin-top: 10px;
     display: grid;
@@ -415,6 +416,19 @@
     display: none;
 }
 
+.new-pain {
+    display: none;
+}
+
+.new-pain.active {
+    display: block;
+}
+
+
+.artist-profile.active {
+    display: block;
+}
+
 .artist-profile-hat {
     margin-top: 20px;
     display: flex;
@@ -522,6 +536,10 @@
     display: none;
 }
 
+.alb.active {
+    display: block;
+}
+
 .album-tracklist-close {
     position: absolute;
     right: -35px;
@@ -529,8 +547,8 @@
 
 .album-tracklist {
     width: 300px;
-    max-height: 397px;
-    min-height: 177px;
+    max-height: 395px;
+    min-height: 175px;
     border-radius: 10px;
     background: #d8d8d8;
     overflow: auto;
@@ -543,6 +561,10 @@
     height: 100%;
     background: rgba(0, 0, 0, 0.55);
     display: none;
+}
+
+.sloy.active {
+    display: block;
 }
 
 .album-tracklist-header {
@@ -719,6 +741,10 @@
     display: none;
 }
 
+.all-single.active {
+    display: block;
+}
+
 .all-single .head {
     display: flex;
     align-items: center;
@@ -781,6 +807,10 @@
     height: 465px;
     overflow: auto;
     display: none;
+}
+
+.all-album.active {
+    display: block;
 }
 
 .all-album .head {
